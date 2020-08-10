@@ -1,0 +1,35 @@
+@import "mixins";
+@import "fonts";
+@import "colors";
+
+$fontFamily: "Open Sans";
+
+$maxWidthContainer: 1170;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+@import "null";
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: $fontFamily;
+  font-size: 14px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+._container{
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+}
+
+@import "blocks/header";
+@import "blocks/intro";
+@import "blocks/footer";
