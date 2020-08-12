@@ -5,10 +5,11 @@
 $fontFamily: "Open Sans";
 
 $maxWidthContainer: 1170;
-$md1: $maxWidthContainer + 12;
-$md2: 991.98;
-$md3: 767.98;
-$md4: 479.98;
+$xxl: $maxWidthContainer + 300;
+$xl: $maxWidthContainer + 12;
+$lg: 991.98;
+$md: 767.98;
+$sm: 479.98;
 
 @import "null";
 html{

@@ -1,17 +1,18 @@
 .intro {
-  background-color:#717171;
   min-height: 100vh;
-  background: url('../images/header/uploads/intro-bg.jpg') 0 0 no-repeat;
-  background-size: cover;
   position: relative;
-  &::after{
+  background-color: #717171;
+  background: url('../images/header/intro-bg.jpg') 0 0 no-repeat;
+  background-size: cover;
+
+  &::after {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(28, 27, 27,0.4);
+    background-color: rgba(28, 27, 27, 0.4);
   }
 
   &__body {
@@ -21,25 +22,27 @@
 }
 .body-intro {
   &__content {
-  height: calc(100vh - 225px);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 113px;
+    height: calc(100vh - 225px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 113px;
+    text-align: center;
   }
-  &__button{
+  &__button {
     display: block;
     width: 36px;
     height: 36px;
-    background-color: $crayola-green-jungle;
-    border-radius: 50%;
     margin: 0 auto 76px auto;
-    animation: move 0.7s infinite linear;
+    border-radius: 50%;
+    background-color: $crayola-green-jungle;
     transition: background-color 0.2s ease 0s;
-    &:hover
-    {
+    // change @media (hide button)
+    @media (min-width: $md+px) {
+      animation: move 0.7s infinite linear;
+    }
+    &:hover {
       background-color: $gray-window;
       animation: none;
     }
@@ -56,7 +59,7 @@
   }
 }
 
-.content-intro{
+.content-intro {
   &__title {
     font-family: 'Source Sans Pro light';
     font-size: 35px;
@@ -64,11 +67,21 @@
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 7px;
+    transition: all 0.4s ease 0s;
+    @media (min-width: $xxl+px) {
+      font-size: 44px;
+      margin-bottom: 19px;
+    }
   }
   &__text {
+    width: 603px;
     font-size: 16px;
     line-height: 28px;
     color: #ffffff;
-    width: 603px;
+    transition: all 0.4s ease 0s;
+    @media (min-width: $xxl+px) {
+      font-size: 18px;
+      width: 623px;
+    }
   }
 }

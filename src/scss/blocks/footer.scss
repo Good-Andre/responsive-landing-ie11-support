@@ -6,6 +6,54 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+  }
+  &__logo {
+    margin-bottom: 24px;
+    font-family: 'Big John';
+    font-size: 25px;
+    line-height: 12px;
+  }
+  &__logo-link {
+    color: $granite-gray;
+  }
+  &__text {
+    margin-bottom: 32px;
+    color: $gray-squirrel;
+    line-height: 25px;
+    letter-spacing: 0.7px;
+  }
+  &__social {
+    display: flex;
+  }
+  &__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: all 0.1s ease 0s;
+    &:hover {
+      transform: scale(1.3);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &--fb {
+      background-color: #36518d;
+    }
+    &--twi {
+      background-color: #2a9eca;
+    }
+    &--din {
+      background-color: #176d9e;
+    }
+    &--ins {
+      background-color: #3a6991;
+    }
+    &--vim {
+      background-color: #7ec3eb;
+    }
   }
 }
