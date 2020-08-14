@@ -6,12 +6,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media (max-width: $md+px) {
+      height: 230px;
+    }
+    @media (max-width: $sm+px) {
+      height: 140px;
+    }
   }
   &__logo {
     margin-bottom: 24px;
     font-family: 'Big John';
     font-size: 25px;
     line-height: 12px;
+    @media (max-width: $sm+px) {
+      display: none;
+    }
   }
   &__logo-link {
     color: $granite-gray;
@@ -21,6 +30,12 @@
     color: $gray-squirrel;
     line-height: 25px;
     letter-spacing: 0.7px;
+    @media (max-width: $md+px) {
+      margin-bottom: 18px;
+    }
+    @media (max-width: $sm+px) {
+      margin-bottom: 12px;
+    }
   }
   &__social {
     display: flex;

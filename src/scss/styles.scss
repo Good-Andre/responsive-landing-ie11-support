@@ -24,6 +24,7 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
 }
 
 ._container{
@@ -31,6 +32,28 @@ body{
   margin: 0 auto;
 }
 
+._overlay::after{
+  content: '';
+  z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(15, 15, 15, 0.6);
+}
+
+._btn{
+  background: none;
+  font-size: 16px;
+  line-height: 12px;
+  transition: all 0.2s ease 0s;
+  border: 1px solid $granite-gray;
+  border-radius: 20px;
+  padding: 12px 29px 12px 29px;
+}
+
 @import "blocks/header";
 @import "blocks/intro";
+@import "blocks/about";
 @import "blocks/footer";

@@ -1,10 +1,15 @@
 .intro {
   min-height: 100vh;
   position: relative;
-  background-color: #717171;
+  background-color: #534e47;
   background: url('../images/header/intro-bg.jpg') 0 0 no-repeat;
   background-size: cover;
-
+  transition: all 0.3s ease 0s;
+  @media (max-width: $xl+px) {
+    min-height: auto;
+  }
+  @media (max-width: $md+px) {
+  }
   &::after {
     content: '';
     position: absolute;
@@ -29,18 +34,35 @@
     align-items: center;
     margin-top: 113px;
     text-align: center;
+    transition: all 0.3s ease 0s;
+    @media (max-width: $xl+px) {
+      height: 486px;
+    }
+    @media (max-width: $md+px) {
+      margin-top: 30px;
+      height: 590px;
+    }
+    @media (max-width: $sm+px) {
+      height: 380px;
+    }
   }
   &__button {
+    img {
+      margin-top: 2px;
+    }
+    text-align: center;
     display: block;
     width: 36px;
     height: 36px;
     margin: 0 auto 76px auto;
     border-radius: 50%;
     background-color: $crayola-green-jungle;
+    cursor: pointer;
     transition: background-color 0.2s ease 0s;
-    // change @media (hide button)
-    @media (min-width: $md+px) {
-      animation: move 0.7s infinite linear;
+    animation: move 0.7s infinite linear;
+    @media (max-width: $md+px) {
+      animation: none;
+      display: none;
     }
     &:hover {
       background-color: $gray-window;
@@ -68,20 +90,33 @@
     text-transform: uppercase;
     letter-spacing: 7px;
     transition: all 0.4s ease 0s;
-    @media (min-width: $xxl+px) {
+    @media (min-width: $xl+px) {
       font-size: 44px;
       margin-bottom: 19px;
     }
+    @media (min-width: $md+px) {
+      font-size: 40px;
+    }
+    @media (max-width: $sm+px) {
+      font-size: 30px;
+    }
   }
   &__text {
-    width: 603px;
+    max-width: 603px;
     font-size: 16px;
     line-height: 28px;
     color: #ffffff;
     transition: all 0.4s ease 0s;
-    @media (min-width: $xxl+px) {
+    @media (min-width: $xl+px) {
       font-size: 18px;
       width: 623px;
+    }
+    @media (max-width: $md+px) {
+      padding: 0 13px;
+      font-size: 15px;
+    }
+    @media (max-width: $sm+px) {
+      font-size: inherit;
     }
   }
 }
