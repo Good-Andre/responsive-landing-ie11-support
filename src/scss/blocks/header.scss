@@ -82,13 +82,11 @@
   }
   &__menu-list {
     display: flex;
+    &:last-child{
+      margin-right: 4px;
+    }
     @media (max-width: $md+px) {
       display: none;
-    li{
-      &:last-child{
-        margin-right: 4px;
-      }
-    }
   }
 }
   &__menu-link {
