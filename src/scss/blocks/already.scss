@@ -1,0 +1,27 @@
+.already {
+  background-color: #0A0A0A;
+  background-image: url('../images/already/already-bg-3.jpg');
+  background-position: center;
+  // background-repeat: no-repeat;
+  &__container {
+    height: 201px;
+    text-align: center;
+    width: 100%;
+  }
+  &__title {
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.4px;
+    color: #ffffff;
+    padding-top: 52px;
+    margin-bottom: 29px;
+  }
+  &__button {
+    color: #ffffff;
+    border: 1px solid #fff;
+    &:hover{
+      background-color: #fff;
+      color: $granite-gray;
+    }
+  }
+}

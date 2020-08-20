@@ -4,6 +4,7 @@
   background-color: #534e47;
   background: url('../images/header/intro-bg.jpg') 0 0 no-repeat;
   background-size: cover;
+  
   transition: all 0.3s ease 0s;
   @media (max-width: $xl+px) {
     min-height: auto;
@@ -35,6 +36,7 @@
     margin-top: 113px;
     text-align: center;
     transition: all 0.3s ease 0s;
+
     @media (max-width: $xl+px) {
       height: 486px;
     }
@@ -60,10 +62,13 @@
     cursor: pointer;
     transition: background-color 0.2s ease 0s;
     animation: move 0.7s infinite linear;
-    @media (max-width: $md+px) {
+    @media (max-width: 768px) {
       animation: none;
+    }
+    @media (max-width: $md+px) {
       display: none;
     }
+
     &:hover {
       background-color: $gray-window;
       animation: none;
@@ -94,19 +99,25 @@
       font-size: 44px;
       margin-bottom: 19px;
     }
+    @media (max-width: $md+px) {
+      width: 100%;
+      max-width: 488px;
+    }
     @media (min-width: $md+px) {
       font-size: 40px;
     }
     @media (max-width: $sm+px) {
+      line-height: 40px;
       font-size: 30px;
+      margin-bottom: 10px;
     }
   }
   &__text {
-    max-width: 603px;
+    transition: all 0.4s ease 0s;
     font-size: 16px;
     line-height: 28px;
     color: #ffffff;
-    transition: all 0.4s ease 0s;
+    max-width: 603px;
     @media (min-width: $xl+px) {
       font-size: 18px;
       width: 623px;
@@ -114,6 +125,7 @@
     @media (max-width: $md+px) {
       padding: 0 13px;
       font-size: 15px;
+      width: 100%;
     }
     @media (max-width: $sm+px) {
       font-size: inherit;

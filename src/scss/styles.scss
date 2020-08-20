@@ -7,14 +7,11 @@ $fontFamily: "Open Sans";
 $maxWidthContainer: 1170;
 $xxl: $maxWidthContainer + 300;
 $xl: $maxWidthContainer + 12;
-$lg: 991.98;
-$md: 767.98;
-$sm: 479.98;
+$lg: 992;
+$md: 767.99;
+$sm: 480;
 
 @import "null";
-html{
-  scroll-behavior: smooth;
-}
 body{
   font-family: $fontFamily;
   font-size: 14px;
@@ -27,11 +24,6 @@ body{
   position: relative;
 }
 
-._container{
-  max-width: $maxWidthContainer + px;
-  margin: 0 auto;
-}
-
 ._overlay::after{
   content: '';
   z-index: 2;
@@ -41,6 +33,11 @@ body{
     bottom: 0;
     right: 0;
     background-color: rgba(15, 15, 15, 0.6);
+}
+
+._container{
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
 }
 
 ._btn{
@@ -56,5 +53,5 @@ body{
 @import "blocks/header";
 @import "blocks/intro";
 @import "blocks/hello";
-// @import "blocks/about";
+@import "blocks/already";
 @import "blocks/footer";

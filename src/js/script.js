@@ -7,7 +7,7 @@ $(function () {
     } else {
       $('.wrapper').removeClass('_overlay');
     }
-    if ($('.menu__burger').hasClass('_active')){
+    if ($('.menu__burger').hasClass('_active')) {
       $(document).bind('mousewheel DOMMouseScroll', function () {
         stopWheel();
       });
@@ -18,13 +18,34 @@ $(function () {
 
   $(window).resize(function () {
     if ($(window).width() > 750) {
-      $('.menu__burger,.header__menu-body').removeClass('_active');
-      $('.wrapper').removeClass('_overlay');
-      $(document).unbind('mousewheel DOMMouseScroll');
+      deleteActiveClass();
+    }
+    if ($(window).width() <= 750) {
+      $('.header__menu-link').bind("click", scrollTopFixMenu);
+    } else {
+      $('.header__menu-link').bind("click", function (e) {
+        $('html, body').stop().animate({
+          scrollTop: $($(this).attr('href')).offset().top
+        }, 400);
+        e.preventDefault();
+      });
     }
   });
 
-  $(window).resize();
+  function scrollTopFixMenu(e) {
+    $('html, body').stop().animate({
+      scrollTop: $($(this).attr('href')).offset().top - 64
+    }, 400);
+    e.preventDefault();
+  };
+
+  $('.header__menu-link').on("click", deleteActiveClass);
+
+  function deleteActiveClass() {
+    $('.menu__burger,.header__menu-body').removeClass('_active');
+    $('.wrapper').removeClass('_overlay');
+    $(document).unbind('mousewheel DOMMouseScroll');
+  };
 
   function stopWheel(e) {
     if (!e) {
@@ -37,5 +58,22 @@ $(function () {
     }
     e.returnValue = false; /* IE7, IE8 */
   }
-  
+
+  // $('.tab-trigger').click(function () {
+  //   var id = $(this).attr('data-tab'), // 1
+  //     content = $('.tab-content[data-tab="' + id + '"]');
+  //   $('.tab-trigger._active-tab').removeClass('_active-tab');
+  //   $(this).addClass('_active-tab');
+  //   $('.tab-content._active-tab').removeClass('_active-tab');
+  // });
+
+// smooth scrolling for ie11
+var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
+});
+  $(window).resize();
 });
