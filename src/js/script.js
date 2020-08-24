@@ -59,13 +59,15 @@ $(function () {
     e.returnValue = false; /* IE7, IE8 */
   }
 
-  // $('.tab-trigger').click(function () {
-  //   var id = $(this).attr('data-tab'), // 1
-  //     content = $('.tab-content[data-tab="' + id + '"]');
-  //   $('.tab-trigger._active-tab').removeClass('_active-tab');
-  //   $(this).addClass('_active-tab');
-  //   $('.tab-content._active-tab').removeClass('_active-tab');
-  // });
+  // about section tabs
+  $('.tab-trigger').click(function () {
+    var id = $(this).attr('data-tab'), // 1
+      content = $('.tab-content[data-tab="' + id + '"]');
+    $('.tab-trigger._active-tab').removeClass('_active-tab');
+    $(this).addClass('_active-tab');
+    $('.tab-content._active-tab').removeClass('_active-tab');
+    content.addClass('_active-tab');
+  });
 
 // smooth scrolling for ie11
 var $page = $('html, body');
