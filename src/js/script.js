@@ -77,5 +77,22 @@ $('a[href*="#"]').click(function() {
     }, 400);
     return false;
 });
+
+  // SLICK SLIDER
+  $('.team__slider').slick({
+    dots: true,
+    customPaging : function(slider, i) {
+      return `<div class="slider-dots">
+      <div class="slider-dots__item">
+      </div>
+    </div>`;
+  },
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  });
+
   $(window).resize();
 });

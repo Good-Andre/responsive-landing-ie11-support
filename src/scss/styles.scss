@@ -1,3 +1,5 @@
+@import "null";
+@import "libs";
 @import "mixins";
 @import "fonts";
 @import "colors";
@@ -11,7 +13,6 @@ $lg: 992;
 $md: 767.99;
 $sm: 480;
 
-@import "null";
 body{
   font-family: $fontFamily;
   font-size: 14px;
@@ -54,5 +55,8 @@ body{
 @import "blocks/intro";
 @import "blocks/hello";
 @import "blocks/about";
+
+@import "blocks/team";
+
 @import "blocks/already";
 @import "blocks/footer";
