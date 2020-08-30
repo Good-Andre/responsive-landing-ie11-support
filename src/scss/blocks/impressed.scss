@@ -1,0 +1,141 @@
+.impressed {
+  min-height: 392px;
+  background-color: #1f1f21;
+  background-image: url('../images/impressed/impressed-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  @media (max-width: 1110+px) {
+    background-position: top;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  &__container {
+    display: flex;
+    padding: 0 20px;
+    max-width: 1210px;
+    transition: all 0.3s ease 0s;
+    justify-content: space-between;
+    @media (max-width: 1110+px) {
+      flex-direction: column;
+    }
+  }
+  &__left {
+    z-index: 1;
+    max-width: 600px;
+    transition: all 0.3s ease 0s;
+    margin-top: 80px;
+    color: $gray-window;
+    @media (max-width: 1110+px) {
+      width: 100%;
+      margin: 64px auto 40px auto;
+      text-align: center;
+    }
+    @media (max-width: $md+px) {
+      margin-top: 0;
+    }
+    @media (max-width: 470px) {
+      margin-top: 44px;
+    }
+  }
+  &__title {
+    @include section-title;
+    color: #ffffff;
+    margin-bottom: 58px;
+    @media (max-width: $md+px) {
+      margin-top: 50px;
+      margin-bottom: 36px;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 18px;
+  }
+  &__author {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: bold;
+    letter-spacing: 0.9px;
+  }
+  &__author-position {
+    line-height: 25px;
+    letter-spacing: 0.6px;
+    span {
+      color: #1cbe95;
+    }
+  }
+  &__right {
+    width: 409px;
+    height: 328px;
+    z-index: 1;
+    position: relative;
+    @media (max-width: 1110+px) {
+      margin: 0 auto 40px auto;
+    }
+    @media (max-width: 470px) {
+      display: none;
+    }
+  }
+  &__img-block {
+    width: 409px;
+    height: 328px;
+    position: absolute;
+    top: -38px;
+    background-image: url('../images/impressed/tv-0.png');
+    &:hover .impressed__right-h {
+      opacity: 10;
+    }
+    &:hover .impressed__right-text--1 {
+      opacity: 0;
+    }
+    @media (max-width: 1110+px) {
+      top: 0;
+    }
+  }
+  &__right-text {
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    cursor: default;
+    color: #cdcdcd;
+    span {
+      color: #139679;
+    }
+    &--1 {
+      font-family: 'Big John';
+      font-size: 30px;
+      width: 136px;
+      height: 20px;
+      left: 134px;
+      top: 105px;
+    }
+    &--h1 {
+      width: 142px;
+      height: 80px;
+      left: 96px;
+    }
+    &--h2 {
+      width: 104px;
+      height: 80px;
+      right: 60px;
+    }
+  }
+  &__right-h {
+    top: 90px;
+    font-weight: 600;
+    font-family: 'Bebas Neue Regular', sans-serif;
+    font-size: 26px;
+    font-stretch: condensed;
+    color: #fff;
+    opacity: 0;
+  }
+}
