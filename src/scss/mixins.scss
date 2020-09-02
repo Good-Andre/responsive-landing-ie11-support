@@ -11,8 +11,21 @@
 
 @mixin section-title {
   font-family: 'Source Sans Pro light';
-  line-height: 12px;
-  font-size: 21px;
-  color: $granite-gray;
-  letter-spacing: 3.8px;
+    line-height: 12px;
+    font-size: 21px;
+    color: $granite-gray;
+    letter-spacing: 3.8px;
+    margin-bottom: 36px;
+    margin-top: 76px;
+    text-align: center;
+}
+
+@mixin section-text {
+  margin: 0 auto;
+  line-height: 25px;
+  color: $gray-squirrel;
+  text-align: center;
+  max-width: 458px;
+  padding: 0 15px;
+  margin-bottom: 58px;
 }
