@@ -25,15 +25,18 @@ body{
   position: relative;
 }
 
-._overlay::after{
-  content: '';
+._overlay{
   z-index: 2;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(15, 15, 15, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(15, 15, 15, 0.6);
+  display: none;
+}
+._overlay-show{
+  display: block;
 }
 
 ._container{
@@ -51,6 +54,47 @@ body{
   padding: 12px 29px 12px 29px;
 }
 
+@keyframes move {
+  20% {
+    transform: translateY(3px);
+    animation-timing-function: ease-in-out;
+  }
+  75% {
+    transform: translateY(-3px);
+  }
+}
+
+.scroll-up{
+  transition: opacity 0.2s ease 0s;
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  background-color: $crayola-green-jungle;
+  background-color: rgba(35, 182, 145, 0.7);
+  border-radius: 50%;
+  right: 15px;
+  top: 35%;
+  z-index: -1;
+  transform: rotate(180deg);
+  opacity: 0;
+  img{
+    display: block;
+    margin-top: -1px;
+    margin-left: -1px;
+    width: 105%;
+    height: 105%;
+  }
+  &:hover {
+    background-color: $turquoise;
+  }
+}
+
+.scroll-up--show{
+  opacity: 1;
+  z-index: 3;
+}
+
+@import "blocks/page-progress";
 @import "blocks/header";
 @import "blocks/intro";
 @import "blocks/hello";

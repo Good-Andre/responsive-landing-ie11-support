@@ -41,11 +41,11 @@
       height: 486px;
     }
     @media (max-width: $md+px) {
-      margin-top: 30px;
+      margin-top: 50px;
       height: 590px;
     }
     @media (max-width: $sm+px) {
-      height: 380px;
+      height: 360px;
     }
   }
   &__button {
@@ -70,19 +70,9 @@
     }
 
     &:hover {
-      background-color: $gray-window;
+      background-color: $turquoise;
       animation: none;
     }
-  }
-}
-
-@keyframes move {
-  20% {
-    transform: translateY(3px);
-    animation-timing-function: ease-in-out;
-  }
-  75% {
-    transform: translateY(-3px);
   }
 }
 
@@ -110,6 +100,8 @@
       line-height: 40px;
       font-size: 30px;
       margin-bottom: 10px;
+      margin-top: 20px;
+      padding: 0 20px;
     }
   }
   &__text {
@@ -120,7 +112,7 @@
     max-width: 603px;
     @media (min-width: $xl+px) {
       font-size: 18px;
-      width: 623px;
+      max-width: 623px;
     }
     @media (max-width: $md+px) {
       padding: 0 13px;
