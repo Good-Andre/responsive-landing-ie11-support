@@ -14,20 +14,15 @@ $(function () {
       $(document).bind('mousewheel DOMMouseScroll', function () {
         stopWheel();
       });
-      $('.scroll-up').removeClass('scroll-up--show');
     } else {
       $(document).unbind('mousewheel DOMMouseScroll');
       if ($(document).scrollTop() > 700) {
-        $('.scroll-up').addClass('scroll-up--show');
       }
     }
   });
 
   $('._overlay').on('click', function () {
     deleteActiveClass();
-    if ($(document).scrollTop() > 700) {
-      $('.scroll-up').addClass('scroll-up--show');
-    }
   });
 
   // smooth scrolling (for ie-11 support)
@@ -137,7 +132,7 @@ $(function () {
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
   });
 
@@ -161,16 +156,18 @@ $(function () {
   });
 
   // Scroll Up button
-
+  if ($(document).scrollTop() > 700) {
+    $('.scroll-up').addClass('scroll-up--show');
+  }
+  
   $(document).scroll(function () {
-    if (!$('.menu__burger').hasClass('_active')) {
       if ($(document).scrollTop() > 700) {
         $('.scroll-up').addClass('scroll-up--show');
       } else if ($(document).scrollTop() < 700) {
         $('.scroll-up').removeClass('scroll-up--show');
       }
-    }
   });
 
+  scrollProgress();
   $(window).resize();
 });

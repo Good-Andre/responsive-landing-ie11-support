@@ -42,7 +42,7 @@
               <li><a href="#" class="header__menu-link">Portfolio</a></li>
               <li><a href="#team" class="header__menu-link">Team</a></li>
               <li><a href="#" class="header__menu-link">Blog</a></li>
-              <li><a href="#" class="header__menu-link">Contact</a></li>
+              <li><a href="#contact" class="header__menu-link">Contact</a></li>
           </ul>
       </nav>
     </div>
@@ -84,13 +84,13 @@
       <div class="about__icons-inner">
 
         <div class="about__icon-item tab-trigger _active-tab" data-tab="1">
-          <img src="images/about/like.svg" alt="like icon">
+          <img src="images/icons/like.svg" alt="like icon">
         </div>
         <div class="about__icon-item tab-trigger" data-tab="2">
-          <img src="images/about/mouse.svg" alt="mouse icon">
+          <img src="images/icons/mouse.svg" alt="mouse icon">
         </div>
         <div class="about__icon-item tab-trigger" data-tab="3">
-          <img src="images/about/lamp.svg" alt="lamp icon">
+          <img src="images/icons/lamp.svg" alt="lamp icon">
         </div>
 
       </div>
@@ -146,12 +146,23 @@
     <h2 class="team__title">THE TEAM</h2>
     <p class="team__text">At vero eos et accusamus et iustro odio dignissimos ducimus qui blanditiis praesentium</p>
     <div class="team__slider slider">
+      <!-- <div class="slider"> -->
 
       <div class="slider-item">
         <div class="slider-team">
 
-
           <div class="slider-team__left-block">
+            <div class="slider-team__hover">
+              <a href="#" class="slider-team__hover-social">
+                <img src="images/icons/instagram.svg" alt="instagram">
+              </a>
+              <a href="#" class="slider-team__hover-social">
+                <img src="images/icons/facebook.svg" alt="facebook">
+              </a>
+              <a href="#" class="slider-team__hover-social">
+                <img src="images/icons/twitter.svg" alt="twitter">
+              </a>
+            </div>
             <img src="images/team/team-slide-1.jpg" alt="team member">
           </div>
           <div class="slider-team__right-block">
@@ -166,6 +177,7 @@
               <div class="linear-progress__bar">
                 <div class="linear-progress__bar-line linear-progress__bar-line-1"></div>
               </div>
+
             </div>
 
             <div class="slider-item__linear-progress linear-progress">
@@ -174,6 +186,7 @@
               <div class="linear-progress__bar">
                 <div class="linear-progress__bar-line linear-progress__bar-line-2"></div>
               </div>
+
             </div>
 
             <div class="slider-item__linear-progress linear-progress">
@@ -182,6 +195,7 @@
               <div class="linear-progress__bar">
                 <div class="linear-progress__bar-line linear-progress__bar-line-3"></div>
               </div>
+
             </div>
 
           </div>
@@ -193,6 +207,17 @@
 
 
           <div class="slider-team__left-block">
+            <div class="slider-team__hover">
+              <a href="#" class="slider-team__hover-social">
+                <img src="images/icons/instagram.svg" alt="instagram">
+              </a>
+              <a href="#" class="slider-team__hover-social">
+                <img src="images/icons/facebook.svg" alt="facebook">
+              </a>
+              <a href="#" class="slider-team__hover-social">
+                <img src="images/icons/twitter.svg" alt="twitter">
+              </a>
+            </div>
             <img src="images/team/team-slide-2.jpg" alt="team member">
           </div>
           <div class="slider-team__right-block">
@@ -234,6 +259,17 @@
 
 
           <div class="slider-team__left-block">
+            <div class="slider-team__hover">
+              <a href="#" class="slider-team__hover-social">
+                <img src="images/icons/instagram.svg" alt="instagram">
+              </a>
+              <a href="#" class="slider-team__hover-social">
+                <img src="images/icons/facebook.svg" alt="facebook">
+              </a>
+              <a href="#" class="slider-team__hover-social">
+                <img src="images/icons/twitter.svg" alt="twitter">
+              </a>
+            </div>
             <img src="images/team/team-slide-3.jpg" alt="team member">
           </div>
           <div class="slider-team__right-block">
@@ -354,7 +390,42 @@
     </div>
   </div>
 </section>
+  
+  <div class="form-section" id="form-section">
+  <div class="form-section__container _container">
 
+    <form action="#" class="form-section__form form" id="form-section">
+
+      <div class="form__inner">
+        <input type="text" class="form__inner-name form__inner-item"  placeholder="Your name" required form="form-section">
+        <input type="text" class="form__inner-email form__inner-item"  placeholder="Email address" required form="form-section">
+        <input type="text" class="form__inner-subject form__inner-item" placeholder="Subject" required form="form-section">
+      </div>
+      
+      <textarea class="form__textarea" form="form-section" required></textarea>
+      <input type="submit" class="form__submit" value="SUBMIT NOW" form="form-section">
+
+    </form>
+
+  </div>
+</div>
+  <div class="map" id="section-map">
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14048.126761586906!2d-0.12502286830422404!3d51.506217984959704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1599217222110!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
+
+  <div class="map__overlay overlay-map">
+    <div class="overlay-map__inner">
+      <button class="overlay-map__button overlay-map__button--1">FIND US ON THE MAP</button>
+      <button class="overlay-map__button overlay-map__button--2">
+        <img src="images/icons/arrow.svg" alt="down arrow icon">
+      </button>
+    </div>
+    <!-- <button class="map__overlay-button-1">FIND US ON THE MAP</button>
+    <button class="map__overlay-button-2">
+      <img src="images/header/icons/angle-down.svg" alt="down arrow icon">
+    </button> -->
+  </div>
+</div>
   <footer class="footer">
   <div class="footer__container _container">
     <div class="footer__logo">
@@ -363,19 +434,19 @@
     <p class="footer__text">Copyright 2020. All rights Reserved</p>
     <div class="footer__social">
       <a href="#" class="footer__social-link footer__social-link--fb">
-        <img src="images/footer/icons/facebook.svg" alt="facebook">
+        <img src="images/icons/facebook.svg" alt="facebook">
       </a>
       <a href="#" class="footer__social-link footer__social-link--twi">
-        <img src="images/footer/icons/twitter.svg" alt="twitter">
+        <img src="images/icons/twitter.svg" alt="twitter">
       </a>
       <a href="#" class="footer__social-link footer__social-link--din">
-        <img src="images/footer/icons/linkedin.svg" alt="linkedin">
+        <img src="images/icons/linkedin.svg" alt="linkedin">
       </a>
       <a href="#" class="footer__social-link footer__social-link--ins">
-        <img src="images/footer/icons/instagram.svg" alt="instagram">
+        <img src="images/icons/instagram.svg" alt="instagram">
       </a>
       <a href="#" class="footer__social-link footer__social-link--vim">
-        <img src="images/footer/icons/vimeo.svg" alt="vimeo">
+        <img src="images/icons/vimeo.svg" alt="vimeo">
       </a>
     </div>
   </div>

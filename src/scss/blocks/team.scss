@@ -2,7 +2,6 @@
   min-height: 771px;
   @media (max-width: $md+px) {
     min-height: 680px;
-
   }
   @media (max-width: 1180px) {
     min-height: 730px;
@@ -25,8 +24,11 @@
     @include section-text;
     margin: 0 auto;
     margin-bottom: 58px;
+    @media (max-width: 720px) {
+      margin-bottom: 10px;
+    }
     @media (max-width: $sm+px) {
-      margin-bottom: 25px;
+      // margin-bottom: 5px;
     }
   }
   &__slider {
@@ -47,10 +49,54 @@
     padding-bottom: 1px;
   }
   &__left-block {
+    @media (min-width: $md+px) {
+      &:hover .slider-team__hover{
+        opacity: 1;
+      }
+    }
     @media (max-width: 720px) {
       margin: 0 auto;
       width: 285px;
     }
+  }
+  &__hover {
+    position: absolute;
+    width: 269px;
+    height: 348px;
+    bottom: 8px;
+    left: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    @media (max-width: 720px) {
+      margin: 0 auto;
+      position: static;
+      margin-bottom: 10px;
+    }
+    @media (max-width: $md+px) {
+      opacity: 1;
+      height: 45px;
+    }
+  }
+  &__hover-social {
+    transition: all 0.1s ease 0s;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 11px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover{
+      transform: scale(1.3);
+    }
+
   }
   &__right-block {
     margin-right: 46px;

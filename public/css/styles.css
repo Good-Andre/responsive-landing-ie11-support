@@ -11,6 +11,11 @@
   box-sizing: border-box;
 }
 
+a:active,
+a:focus {
+  outline: none;
+}
+
 nav,
 footer,
 header,
@@ -350,6 +355,10 @@ body {
 .scroll-up--show {
   opacity: 1;
   z-index: 3;
+}
+
+.slick-slide {
+  outline: none;
 }
 
 .article-title {
@@ -954,6 +963,55 @@ body {
   position: relative;
 }
 
+.slider-team__hover {
+  position: absolute;
+  width: 269px;
+  height: 348px;
+  bottom: 8px;
+  left: 8px;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+}
+
+.slider-team__hover-social {
+  -webkit-transition: all 0.1s ease 0s;
+  -o-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 11px;
+}
+
+.slider-team__hover-social:last-child {
+  margin-right: 0;
+}
+
+.slider-team__hover-social:hover {
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
 .slider-team__right-block {
   margin-right: 46px;
   width: 366px;
@@ -1270,6 +1328,146 @@ body {
   right: 70px;
 }
 
+.form-section {
+  max-height: 552px;
+  background-color: #fff;
+}
+
+.form-section__container {
+  max-width: 981px;
+  padding: 0 20px;
+}
+
+.form__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 80px;
+  margin-bottom: 29px;
+}
+
+.form__inner-item {
+  border: 1px solid #D3D8DC;
+  font-size: 14px;
+  max-width: 287px;
+  width: 100%;
+  line-height: 41px;
+  height: 41px;
+  padding-left: 20px;
+  margin-right: 15px;
+  color: #2E353E;
+}
+
+.form__inner-item:last-child {
+  margin-right: 0;
+}
+
+.form__textarea {
+  border: 1px solid #D3D8DC;
+  width: 100%;
+  margin-bottom: 30px;
+  height: 190px;
+  resize: none;
+  padding: 15px;
+  color: #2E353E;
+}
+
+.form__submit {
+  background-color: #23B691;
+  font-size: 16px;
+  color: #ffffff;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  line-height: 53px;
+  margin-bottom: 129px;
+}
+
+.form__submit:hover {
+  background-color: #2ACEAB;
+}
+
+.map {
+  height: 496px;
+  position: relative;
+  background-image: url("../images/map/map-bg.jpg");
+  background-position: center;
+}
+
+.overlay-map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-map__inner {
+  position: relative;
+}
+
+.overlay-map__button--1 {
+  background-color: transparent;
+  color: #ffffff;
+  margin-right: 13px;
+  cursor: pointer;
+  line-height: 25px;
+  font-size: 16px;
+}
+
+.overlay-map__button--1:hover ~ .overlay-map__button--2 {
+  background-color: #2ACEAB;
+  -webkit-animation: none;
+          animation: none;
+}
+
+.overlay-map__button--2 {
+  position: absolute;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #23B691;
+  -webkit-transition: background-color 0.2s ease 0s;
+  -o-transition: background-color 0.2s ease 0s;
+  transition: background-color 0.2s ease 0s;
+  -webkit-animation: move 0.7s infinite linear;
+          animation: move 0.7s infinite linear;
+}
+
+.overlay-map__button--2 img {
+  width: 18px;
+  display: block;
+  height: 18px;
+  z-index: 1;
+}
+
+.overlay-map__button--2:hover {
+  background-color: #2ACEAB;
+  -webkit-animation: none;
+          animation: none;
+}
+
+._overlay-hide {
+  display: none;
+}
+
 .footer {
   background-color: #F1F1F1;
 }
@@ -1376,6 +1574,10 @@ body {
     font-size: 40px;
   }
 
+  .slider-team__left-block:hover .slider-team__hover {
+    opacity: 1;
+  }
+
   .price__item:hover > .front-item {
     -webkit-transform: rotateX(-180deg);
             transform: rotateX(-180deg);
@@ -1413,6 +1615,10 @@ body {
 
   .body-intro__content {
     height: 486px;
+  }
+
+  .form__submit {
+    margin-bottom: 80px;
   }
 }
 
@@ -1466,6 +1672,10 @@ body {
 }
 
 @media (max-width: 767.99px) {
+  .scroll-up {
+    display: none;
+  }
+
   .article-title {
     display: none;
   }
@@ -1651,6 +1861,11 @@ body {
     margin-top: 42px;
   }
 
+  .slider-team__hover {
+    opacity: 1;
+    height: 45px;
+  }
+
   .slider-team__text {
     line-height: 20px;
   }
@@ -1757,6 +1972,34 @@ body {
     display: none;
   }
 
+  .form-section__container {
+    max-width: 564px;
+  }
+
+  .form__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 42px;
+    margin-bottom: 0;
+  }
+
+  .form__inner-item {
+    margin-bottom: 15px;
+    max-width: none;
+  }
+
+  .form__textarea {
+    max-width: 522px;
+    margin-bottom: 15px;
+  }
+
+  .form__submit {
+    max-width: 522px;
+    margin-bottom: 42px;
+  }
+
   .footer__container {
     height: 230px;
   }
@@ -1771,6 +2014,10 @@ body {
     padding-bottom: 79px;
   }
 
+  .team__text {
+    margin-bottom: 10px;
+  }
+
   .slider-team {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1783,6 +2030,12 @@ body {
   .slider-team__left-block {
     margin: 0 auto;
     width: 285px;
+  }
+
+  .slider-team__hover {
+    margin: 0 auto;
+    position: static;
+    margin-bottom: 10px;
   }
 
   .slider-team__right-block {
@@ -1850,10 +2103,6 @@ body {
     margin-bottom: 30px;
   }
 
-  .team__text {
-    margin-bottom: 25px;
-  }
-
   .slider-team__title {
     margin-top: 25px;
   }
@@ -1868,6 +2117,19 @@ body {
 
   .price__text {
     margin-bottom: 34px;
+  }
+
+  .form__textarea {
+    height: 100px;
+  }
+
+  .form__submit {
+    font-size: 14px;
+    line-height: 41px;
+  }
+
+  .map {
+    height: 350px;
   }
 
   .footer__container {

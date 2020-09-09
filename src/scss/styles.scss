@@ -87,11 +87,18 @@ body{
   &:hover {
     background-color: $turquoise;
   }
+  @media (max-width: $md+px) {
+    display: none;
+  }
 }
 
 .scroll-up--show{
   opacity: 1;
   z-index: 3;
+}
+
+.slick-slide {
+  outline: none;
 }
 
 @import "blocks/page-progress";
@@ -108,4 +115,6 @@ body{
 
 @import "blocks/price";
 
+@import 'blocks/form';
+@import 'blocks/map';
 @import "blocks/footer";
