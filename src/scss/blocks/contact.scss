@@ -1,0 +1,123 @@
+.contact {
+  background-color: $smoky-white;
+  &__title {
+    @include section-title;
+    @media (max-width: $md+px) {
+      margin-top: 48px;
+    }
+    @media (max-width: $sm+px) {
+      margin-top: 42px;
+    }
+  }
+  &__text {
+    @include section-text;
+    @media (max-width: $md+px) {
+      margin-bottom: 36px;
+    }
+  }
+  &__inner {
+    // background-color: #FFCED8;
+    max-width: 979px;
+    // padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 62px;
+    flex-wrap: wrap;
+    @media (max-width: $md+px) {
+      margin-bottom: 44px;
+    }
+  }
+  &__inner-item {
+    background-color: #fff;
+    box-shadow: 1px 1px 0px 0px rgba(228, 228, 228, 1);
+  }
+}
+
+.item-inner {
+  padding-bottom: 28px;
+  text-align: center;
+  max-width: 287px;
+  // flex: 0 0 287px;
+  margin: 0 19px 38px 19px;
+  // &:last-child{
+  //   margin-right: 0;
+  // }
+  // @media (max-width: $sm+px) {
+  //   margin-bottom: 20px;
+  //   &:last-child{
+  //     margin-bottom: 34px;
+  //   }
+  // }
+  @media (max-width: 991px) {
+    margin-bottom: 20px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  a{
+    display: block;
+    margin: 0 auto;
+    color: $gray-squirrel;
+    transition: all 0.2s ease 0s;
+    &:hover{
+      color: $granite-gray;
+      text-decoration: underline;
+    }
+  }
+  &__image-block {
+    overflow: hidden;
+    position: relative;
+    & ~ a{
+      line-height: 20px;
+    }
+  }
+  &__image-bg{
+    transition: all 0.3s ease 0s;
+    @media (min-width: $md+px) {
+
+      &:hover .item-inner__image-icon{
+        transform: scale(1.2);
+      }
+    }
+
+  }
+  &__image-icon{
+    position: absolute;
+    top: 48px;
+    left: 118px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+    @media (min-width: $md+px) {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__title {
+    line-height: 20px;
+    margin-top: 28px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: $granite-gray;
+    letter-spacing: 0.7px;
+  }
+  &__mail {
+    // display: block;
+    // margin-bottom: 30px;
+    // line-height: 20px;
+  }
+  &__address{
+    max-width: 230px;
+    // display: block;
+    // line-height: 20px;
+
+  }
+  &__phone{
+    // display: block;
+    // line-height: 20px;
+    max-width: 134px;
+  }
+}

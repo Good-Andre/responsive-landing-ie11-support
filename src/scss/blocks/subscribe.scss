@@ -1,0 +1,108 @@
+.subscribe {
+  background-color: #0b0b0b;
+  color: #ffffff;
+  max-height: 378px;
+  background-image: url('../images/subscribe/subscribe-bg.jpg');
+  background-position: center;
+  &__title {
+    @include section-title;
+    color: #ffffff;
+    margin-top: 82px;
+    @media (max-width: $md+px) {
+      margin-top: 48px;
+    }
+    @media (max-width: $sm+px) {
+      margin-top: 42px;
+    }
+  }
+  &__text {
+    @include section-text;
+    @media (max-width: $md+px) {
+      margin-bottom: 42px;
+    }
+  }
+  &__form {
+    display: flex;
+    margin: 0 auto;
+    max-width: 522px;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    @media (max-width: $md+px) {
+      margin-bottom: 48px;
+    }
+    @media (max-width: 580px) {
+      flex-direction: column;
+      margin: 0 20px;
+    }
+  }
+  &__email-inner {
+    position: relative;
+    @media (max-width: 580px) {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 580px;
+      margin-bottom: 15px;
+    }
+    // input:valid ~ label {
+    //   display: none;
+    // }
+  }
+  // &__error-mess {
+  //   content: '';
+  //   position: absolute;
+  //   height: 40px;
+  //   background-color: #fff;
+  //   padding: 0 15px;
+  //   line-height: 40px;
+  //   top: 50px;
+  //   left: -14px;
+  //   border: 1px solid $granite-gray;
+  //   font-size: 12px;
+  //   display: none;
+  // }
+  &__email {
+    border: 1px solid $crayola-green-jungle;
+    background-color: transparent;
+    color: $very-pale;
+    height: 41px;
+    width: 358px;
+    font-size: 14px;
+    padding-left: 22px;
+    &::placeholder{
+      color: $very-pale;
+      opacity: 1;
+    }
+
+    @media (max-width: 580px) {
+      width: 100%;
+    }
+    @media (max-width: 412px) {
+      width: 100%;
+    }
+  }
+  // &__email-placeholder {
+  //   color: $very-pale;
+  //   position: absolute;
+  //   top: 13px;
+  //   left: 22px;
+  //   pointer-events: none;
+  //   // transform: translateY(20px);
+  // }
+  &__submit {
+    line-height: 41px;
+    background-color: $crayola-green-jungle;
+    color: #ffffff;
+    cursor: pointer;
+    min-width: 151px;
+    &:hover {
+      background-color: $turquoise;
+    }
+    @media (max-width: 580px) {
+      max-width: 556px;
+      width: 100%;
+      display: block;
+      margin: 0 auto 44px auto;
+    }
+  }
+}

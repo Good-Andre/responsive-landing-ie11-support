@@ -1,5 +1,3 @@
 public/debug.log
 node_modules
-gulpfile.js
-package.json
 yarn.lock

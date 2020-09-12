@@ -8,12 +8,13 @@
   <script src="js/script.min.js" defer></script>
   <link rel="stylesheet" href="css/styles.min.css">
 </head>
+
 <body>
-<div class="wrapper">
-  <a class="scroll-up " href="#intro">
-    <img src="images/icons/arrow.svg" alt="button scroll up">
-  </a>
-  <div class="article-title">
+  <div class="wrapper">
+    <a class="scroll-up" href="#intro">
+      <img src="images/icons/arrow.svg" alt="button scroll up">
+    </a>
+    <div class="article-title">
   <div class="progress-wrapper">
     
     <div class="progress-container">
@@ -22,8 +23,7 @@
   </div>
 </div>
 
-
-  <header class="header">
+    <header class="header">
   <div class="header__container _container">
     <div class="header__logo">
       <a href="index.html" class="header__logo-link">BOUNCY</a>
@@ -48,7 +48,7 @@
     </div>
   </div>
 </header>
-  <section class="intro" id="intro">
+    <section class="intro" id="intro">
   <div class="intro__body _container">
     <div class="body-intro__content">
       <h1 class="content-intro__title">We Are Code Cafe</h1>
@@ -59,7 +59,7 @@
     </a>
   </div>
 </section>
-  <section class="hello" id="hello">
+    <section class="hello" id="hello">
   <div class="hello__container _container">
     <div class="hello__info">
       <h2 class="hello__info-title">THIS IS BOUNCY</h2>
@@ -76,7 +76,7 @@
     </div>
   </div>
 </section>
-  <section class="about" id="about">
+    <section class="about" id="about">
   <div class="about__container _container">
     <div class="about__top-inner">
       <h2 class="about__top-title">DETAILS ABOUT BOUNCY</h2>
@@ -122,8 +122,9 @@
 
   </div>
 </section>
-  
-  <section class="impressed">
+
+
+    <section class="impressed">
   <div class="impressed__container _container">
     <div class="impressed__left">
       <h2 class="impressed__title">IMPRESSED ?</h2>
@@ -141,7 +142,7 @@
   </div>
 </section>
 
-  <section class="team" id="team">
+    <section class="team" id="team">
   <div class="team__container _container">
     <h2 class="team__title">THE TEAM</h2>
     <p class="team__text">At vero eos et accusamus et iustro odio dignissimos ducimus qui blanditiis praesentium</p>
@@ -310,7 +311,7 @@
 
   </div><!-- team__container -->
 </section>
-  <div class="already">
+    <div class="already">
   
   <div class="already__container _container">
     <p class="already__title">Already Loved Us? Let's talk!</p>
@@ -318,8 +319,9 @@
   </div>
   
 </div>
-  
-  <section class="price">
+
+
+    <section class="price">
   <div class="price__container _container">
     <h2 class="price__title">OUR PRICE</h2>
     <p class="price__text">At vero eos et accusamus et iustro odio dignissimos ducimus qui blanditiis praesentium</p>
@@ -390,8 +392,66 @@
     </div>
   </div>
 </section>
-  
-  <div class="form-section" id="form-section">
+    <section class="subscribe">
+  <div class="subscribe__container _container">
+    <div class="subscribe__title">SUBSCRIBE US</div>
+    <div class="subscribe__text">At vero eos et accusamus et iustro odio dignissimos ducimus qui blanditiis praesentium</div>
+
+    <form class="subscribe__form" action="#" id="form-subscribe">
+      <div class="subscribe__email-inner">
+        <!-- <div class="subscribe__error-mess"></div> -->
+        <input class="subscribe__email" type="text" name="myemail" 
+        id="subscribe-email" required form="form-subscribe" placeholder="Email Address">
+        <!-- <label class="subscribe__email-placeholder">Email Address</label> -->
+      </div>
+      <input class="subscribe__submit" type="submit" value="SUBMIT" id="subscribe-submit" form="form-subscribe">
+    </form>
+    
+  </div>
+</section>
+    <section class="contact" id="contact">
+  <!-- <div class="contact__container _container"> -->
+    <h2 class="contact__title">CONTACT US</h2>
+    <p class="contact__text">At vero eos et accusamus et iustro odio dignissimos ducimus qui blanditiis praesentium</p>
+    <div class="contact__inner">
+      <div class="contact__inner-item item-inner">
+        <div class="item-inner__image-block">
+          <img class="item-inner__image-bg" src="images/contact/contact-1.jpg" alt="email">
+          <a href="#form-section">
+            <img class="item-inner__image-icon" src="images/contact/mail.svg" alt="mail icon">
+          </a>
+        </div>
+        <h3 class="item-inner__title">EMAIL</h3>
+        <a href="mailto:hello@codecafe.com" class="item-inner__mail">HELLO@CODECAFE.COM</a>
+        <a href="mailto:personal@codecafe.com" class="item-inner__mail">PERSONAL@CODECAFE.COM</a>
+      </div>
+
+      <div class="contact__inner-item item-inner">
+        <div class="item-inner__image-block">
+          <img class="item-inner__image-bg" src="images/contact/contact-2.jpg" alt="address image">
+          <a href="#section-map">
+            <img class="item-inner__image-icon" src="images/contact/map-marker.svg" alt="map-marker icon">
+          </a>
+        </div>
+        <h3 class="item-inner__title">OUR OFFICE</h3>
+        <a href="#section-map" class="item-inner__address">240 BHAATIKHANA, 8200 BRAZIL BANGLADESH</a>
+      </div>
+
+      <div class="contact__inner-item item-inner">
+        <div class="item-inner__image-block">
+          <img class="item-inner__image-bg" src="images/contact/contact-3.jpg" alt="phone image">
+          <a href="#contact">
+            <img class="item-inner__image-icon" src="images/contact/call.svg" alt="call icon">
+          </a>
+        </div>
+        <h3 class="item-inner__title">PHONE</h3>
+        <a href="tel:0011669966441199664465" class="item-inner__phone">+00 11 66 99 66 44 11 99 66 44 65</a>
+      </div>
+
+    </div>
+  <!-- </div> -->
+</section>
+    <div class="form-section" id="form-section">
   <div class="form-section__container _container">
 
     <form action="#" class="form-section__form form" id="form-section">
@@ -409,7 +469,7 @@
 
   </div>
 </div>
-  <div class="map" id="section-map">
+    <div class="map" id="section-map">
   
   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14048.126761586906!2d-0.12502286830422404!3d51.506217984959704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1599217222110!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
 
@@ -426,7 +486,7 @@
     </button> -->
   </div>
 </div>
-  <footer class="footer">
+    <footer class="footer">
   <div class="footer__container _container">
     <div class="footer__logo">
       <a href="index.html" class="footer__logo-link">BOUNCY</a>
@@ -451,10 +511,9 @@
     </div>
   </div>
 </footer>
-  
-</div>
-<div class="_overlay"></div>
-
-</div>
+  </div>
+  <div class="_overlay"></div>
+  </div>
 </body>
+
 </html>
