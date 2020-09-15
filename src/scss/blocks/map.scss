@@ -1,7 +1,5 @@
 .map {
   height: 496px;
-  // height: 100%;
-  // width: 100%;
   position: relative;
   background-image: url('../images/map/map-bg.jpg');
   background-position: center;
@@ -24,9 +22,6 @@
   height: 100%;
   &__inner {
     position: relative;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
   }
   &__button {
     &--1 {
@@ -44,7 +39,6 @@
     &--2 {
       position: absolute;
       top: 4px;
-      // right: 0;
       width: 18px;
       height: 18px;
       border-radius: 50%;
@@ -57,9 +51,6 @@
         height: 18px;
         z-index: 1;
       }
-      // @media (max-width: 768px) {
-      //   animation: none;
-      // }
       &:hover {
         background-color: $turquoise;
         animation: none;
@@ -67,9 +58,6 @@
     }
   }
 }
-
 ._overlay-hide{
   display: none;
 }
-
-// -------------

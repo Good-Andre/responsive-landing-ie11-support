@@ -1,6 +1,7 @@
 .footer {
   background-color: $smoky-white;
   &__container {
+    transition: all 0.3s ease 0s;
     height: 290px;
     display: flex;
     flex-direction: column;
@@ -10,14 +11,15 @@
       height: 230px;
     }
     @media (max-width: $sm+px) {
-      height: 140px;
+      height: 160px;
+      margin-bottom: 10px;
     }
   }
   &__logo {
-    margin-bottom: 24px;
     font-family: 'Big John';
     font-size: 25px;
     line-height: 12px;
+    margin-bottom: 24px;
     @media (max-width: $sm+px) {
       display: none;
     }
@@ -26,10 +28,11 @@
     color: $granite-gray;
   }
   &__text {
-    margin-bottom: 32px;
     color: $gray-squirrel;
     line-height: 25px;
     letter-spacing: 0.7px;
+    margin-bottom: 32px;
+    transition: all 0.3s ease 0s;
     @media (max-width: $md+px) {
       margin-bottom: 18px;
     }
@@ -46,8 +49,8 @@
     align-items: center;
     width: 26px;
     height: 26px;
-    margin-right: 10px;
     border-radius: 50%;
+    margin-right: 10px;
     transition: all 0.1s ease 0s;
     &:hover {
       transform: scale(1.3);

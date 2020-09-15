@@ -1,7 +1,6 @@
 .impressed {
   min-height: 392px;
   background-color: #1f1f21;
-  // background: linear-gradient(to bottom, rgba(35,35,37,1) 14%, rgba(6,5,5,1) 68%);
   background-image: url('../images/impressed/impressed-bg-1.1.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -10,7 +9,6 @@
   @media (max-width: 1110+px) {
     background-image: url('../images/impressed/impressed-bg-2.2.jpg');
   }
-  // transition: all 0.3s ease 0s;
   @media (max-width: 1110+px) {
     background-position: top;
   }
@@ -18,7 +16,6 @@
     min-height: 104px;
     max-height: 392px;
   }
-
   &::after {
     content: '';
     position: absolute;
@@ -28,10 +25,9 @@
     right: 0;
     background-color: rgba(0, 0, 0, 0.8);
   }
-
   &__container {
     display: flex;
-    padding: 0 20px;
+    padding: 0 25px;
     max-width: 1210px;
     transition: all 0.3s ease 0s;
     justify-content: space-between;
@@ -54,12 +50,10 @@
       margin-top: 0;
     }
     @media (max-width: 470px) {
-      // margin-top: 44px;
       margin-bottom: 36px;
     }
     @media (max-width: $sm+px) {
       margin-top: 0;
-
     }
   }
   &__title {
@@ -76,18 +70,14 @@
       margin-bottom: 36px;
     }
     @media (max-width: $sm+px) {
-      // margin-top: 30px;
+      margin-top: 42px;
       margin-bottom: 31px;
     }
   }
   &__text {
-    // color: $gray-window;
     font-size: 16px;
     line-height: 28px;
-    // ls50
     margin-bottom: 18px;
-    
-    
   }
   &__author {
     text-transform: uppercase;
@@ -104,18 +94,15 @@
     }
   }
   &__right {
-    // background-color: #fff;
     width: 409px;
     height: 328px;
     z-index: 1;
     position: relative;
     @media (max-width: 1110+px) {
-      margin: 0 auto 40px auto;
+      margin: 0 auto 50px auto;
     }
     @media (max-width: $sm+px) {
-      // transition: all 0.3s ease 0s;
       display: none;
-      // opacity: 0;
     }
   }
   &__img-block {
@@ -123,9 +110,7 @@
     height: 328px;
     position: absolute;
     top: -38px;
-    // z-index: 1;
     background-image: url('../images/impressed/tv-0.png');
-    // background-position: 0 0;
     &:hover .impressed__right-h {
       opacity: 10;
     }
@@ -151,7 +136,6 @@
       height: 20px;
       left: 134px;
       top: 105px;
-      // display: none;
     }
     &--h1 {
       width: 142px;
@@ -174,4 +158,3 @@
     opacity: 0;
   }
 }
-// 162 расстояние между текстом и img

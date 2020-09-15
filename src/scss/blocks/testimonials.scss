@@ -1,0 +1,112 @@
+.testimonials {
+  min-height: 650px;
+  background-color: $smoky-white;
+  &__title {
+    @include section-title;
+    @media (max-width: $md+px) {
+      margin-top: 50px;
+    }
+    @media (max-width: $sm+px) {
+      margin-top: 42px;
+      margin-bottom: 30px;
+    }
+  }
+  &__text {
+    @include section-text;
+    @media (max-width: $sm+px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__slider-inner{
+    background-color: #fff;
+    box-shadow: 1px 1px 0px 0px rgba(228, 228, 228, 1);
+    padding: 0 20px;
+  }
+  &__slider {
+    max-width: 970px;
+    margin: 0 auto;
+    min-height: 316px;
+    display: block;
+    background-color: #fff;
+    padding-bottom: 60px;
+    @media (max-width: $sm+px) {
+      padding-bottom: 44px;
+    }
+  }
+}
+.slider-testimonials {
+  min-height: 147px;
+  display: flex;
+  justify-content: center;
+  @media (max-width: $sm+px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  &__left {
+    margin-top: 52px;
+    margin-right: 70px;
+    img{
+      border-radius: 50%;
+    }
+    @media (max-width: $sm+px) {
+      margin-top: 33px;
+      margin-right: 0px;
+    }
+    @media (max-width: $sm+px) {
+      margin-bottom: 25px;
+    }
+  }
+  &__right {
+    width: 100%;
+    max-width: 755px;
+    margin-bottom: 50px;
+    @media (max-width: $sm+px) {
+      text-align: center;
+      margin-bottom: 0px;
+    }
+    @media (max-width: $md+px) {
+      margin-bottom: 8px;
+    }
+  }
+  &__text {
+    color: $gray-squirrel;
+    margin-top: 52px;
+    max-width: 755px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 22px;
+    @media (max-width: $sm+px) {
+      margin: 0 20px 15px 20px;
+    }
+    @media (max-width: 332px) {
+    }
+  }
+  &__name {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    color: $light-green-sea;
+    margin-bottom: 3px;
+    @media (max-width: $sm+px) {
+    }
+  }
+  &__rank {
+    line-height: 20px;
+    color: $granite-gray;
+    @media (max-width: $md+px) {
+      margin-bottom: 38px;
+    }
+  }
+}
+.testimonials-dots {
+  &__item {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #23b691;
+  }
+}
+.slick-active .testimonials-dots__item {
+  background-color: #23b691;
+}

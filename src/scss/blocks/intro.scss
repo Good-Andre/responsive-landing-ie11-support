@@ -4,7 +4,6 @@
   background-color: #534e47;
   background: url('../images/header/intro-bg.jpg') 0 0 no-repeat;
   background-size: cover;
-  
   transition: all 0.3s ease 0s;
   @media (max-width: $xl+px) {
     min-height: auto;
@@ -20,7 +19,6 @@
     right: 0;
     background-color: rgba(28, 27, 27, 0.4);
   }
-
   &__body {
     position: relative;
     z-index: 1;
@@ -75,7 +73,6 @@
     }
   }
 }
-
 .content-intro {
   &__title {
     font-family: 'Source Sans Pro light';

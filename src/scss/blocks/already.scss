@@ -2,9 +2,11 @@
   background-color: #0A0A0A;
   background-image: url('../images/already/already-bg-3.jpg');
   background-position: center;
-  // background-repeat: no-repeat;
+  height: 201px;
+  @media (max-width: $sm+px) {
+    height: 100%;
+  }
   &__container {
-    height: 201px;
     text-align: center;
     width: 100%;
   }
@@ -13,8 +15,11 @@
     line-height: 25px;
     letter-spacing: 0.4px;
     color: #ffffff;
-    padding-top: 52px;
+    margin-top: 52px;
     margin-bottom: 29px;
+    @media (max-width: $sm+px) {
+      margin-top: 35px;
+    }
   }
   &__button {
     color: #ffffff;
@@ -22,6 +27,9 @@
     &:hover{
       background-color: #fff;
       color: $granite-gray;
+    }
+    @media (max-width: $sm+px) {
+      margin-bottom: 42px;
     }
   }
 }

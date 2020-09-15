@@ -44,23 +44,7 @@
       max-width: 580px;
       margin-bottom: 15px;
     }
-    // input:valid ~ label {
-    //   display: none;
-    // }
   }
-  // &__error-mess {
-  //   content: '';
-  //   position: absolute;
-  //   height: 40px;
-  //   background-color: #fff;
-  //   padding: 0 15px;
-  //   line-height: 40px;
-  //   top: 50px;
-  //   left: -14px;
-  //   border: 1px solid $granite-gray;
-  //   font-size: 12px;
-  //   display: none;
-  // }
   &__email {
     border: 1px solid $crayola-green-jungle;
     background-color: transparent;
@@ -73,7 +57,6 @@
       color: $very-pale;
       opacity: 1;
     }
-
     @media (max-width: 580px) {
       width: 100%;
     }
@@ -81,14 +64,6 @@
       width: 100%;
     }
   }
-  // &__email-placeholder {
-  //   color: $very-pale;
-  //   position: absolute;
-  //   top: 13px;
-  //   left: 22px;
-  //   pointer-events: none;
-  //   // transform: translateY(20px);
-  // }
   &__submit {
     line-height: 41px;
     background-color: $crayola-green-jungle;

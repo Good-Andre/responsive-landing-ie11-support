@@ -1,8 +1,8 @@
 .hello {
   background-color: #fff;
   width: 100%;
+  min-height: 487px;
   &__container {
-    min-height: 487px;
     max-width: 843px;
     display: flex;
     justify-content: space-between;
@@ -11,6 +11,9 @@
       flex-direction: column;
       margin-bottom: 15px;
       margin-top: 40px;
+    }
+    @media (max-width: $sm+px) {
+      margin-top: 0;
     }
   }
   &__info {
@@ -25,15 +28,16 @@
     }
   }
   &__info-title {
-    font-size: 21px;
-    line-height: 12px;
-    font-family: "Source Sans Pro light";
-    color: $granite-gray;
-    letter-spacing: 3.8px;
+    @include section-title;
+    margin-top: 0;
+    text-align: left;
     margin-bottom: 44px;
     @media (max-width: $md+px) {
       text-align: center;
       margin-bottom: 30px;
+    }
+    @media (max-width: $sm+px) {
+      margin-top: 32px;
     }
   }
   &__info-text {
@@ -41,6 +45,9 @@
     color: $gray-squirrel;
     letter-spacing: 0.5px;
     margin-bottom: 29px;
+    @media (max-width: $md+px) {
+      text-align: center;
+    }
   }
   &__info-btn {
     @media (max-width: $md+px) {
@@ -60,3 +67,4 @@
     }
   }
 }
+

@@ -1,19 +1,14 @@
 .price {
   background-color: $smoky-white;
-  // background-color: #bfe1e1;
   min-height: 638px;
   @media (max-width: $md+px) {
-    // height: 890px;
   }
   &__container {
     max-width: 857px;
     padding: 0 13px;
-    // min-height: 638px;
   }
   &__title {
     @include section-title;
-    // text-align: center;
-    // margin-bottom: 36px;
     margin-top: 76px;
     @media (max-width: $md+px) {
       margin-top: 48px;
@@ -24,7 +19,6 @@
   }
   &__text {
     @include section-text;
-    // margin-bottom: 58px;
     @media (max-width: $md+px) {
       margin-bottom: 44px;
     }
@@ -35,12 +29,9 @@
   &__cards {
     display: flex;
     justify-content: space-between;
-    // flex-wrap: wrap;
     @media (max-width: $md+px) {
       flex-direction: column;
       margin-bottom: 30px;
-      // margin: 0 auto 0 50px;
-      // background-color: #FFCAB8;
     }
   }
   &__item {
@@ -64,7 +55,6 @@
     }
   }
 }
-
 .front-item,
 .back-item {
   background-color: #fff;
@@ -78,14 +68,12 @@
   @media (max-width: $md+px) {
     position: static;
     overflow: visible;
-    // backface-visibility: visible;
     width: 100%;
     height: auto;
     box-shadow: none;
     transition: none;
   }
 }
-
 .front-item {
   transform: rotateX(0deg);
   @media (max-width: $md+px) {
@@ -110,9 +98,6 @@
       line-height: 20px;
       margin-top: 38px;
     }
-    // @media (max-width: $sm+px) {
-    //   margin-top: 15px;
-    // }
   }
   &__cost {
     font-family: 'Source Sans Pro Black';
@@ -141,11 +126,9 @@
   @media (max-width: $md+px) {
     padding-top: 0px;
     transform: none;
-    // flex-direction: row;
   }
   &__text-inner {
     flex: 1 0 auto;
-
     @media (max-width: $md+px) {
       padding-top: 15px;
     }
@@ -161,10 +144,8 @@
       margin-left: 0px;
     }
   }
-
   &__bottom-link {
     flex: 0 0 auto;
-    // 67 232
     font-size: 16px;
     height: 67px;
     line-height: 67px;
@@ -173,10 +154,9 @@
     color: #ffffff;
     position: relative;
     padding: 0 70px;
-    // margin-top: 25px;
-    // position: absolute;
-    // bottom: 0;
-    // margin-bottom: 0;
+    &:hover{
+      background-color: $turquoise;
+    }
     @media (max-width: $md+px) {
       height: auto;
       line-height: 16px;
@@ -189,17 +169,13 @@
       border-radius: 20px;
       padding: 11px 28px 11px 28px;
       width: 134px;
-      // margin-bottom: 13px;
-      // margin-top: 16px;
       margin: 6px auto 15px auto;
-      // position: absolute;
       &:hover{
         border: 1px solid $gray-squirrel;
         color: $gray-squirrel;
         background-color: #fff;
       }
     }
-
     &::after {
       content: (url(../../images/price/back-item-bottom-link-arrow.svg));
       position: absolute;

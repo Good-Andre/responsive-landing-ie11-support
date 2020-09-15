@@ -1,42 +1,32 @@
 .about {
   background-color: $smoky-white;
-  min-height: 618px;
   &__container {
     max-width: 1005px;
     padding: 0 20px;
-    @media (max-width: $md+px) {
-    }
   }
   &__top-inner {
-    max-width: 457px;
+    max-width: 500px;
     margin: 0 auto;
-    text-align: center;
-    margin-top: 76px;
-    @media (max-width: $md+px) {
-      margin-top: 50px;
-    }
-    @media (max-width: $sm+px) {
-      margin-top: 40px;
-    }
   }
   &__top-title {
-    font-family: 'Source Sans Pro light';
-    font-size: 21px;
-    line-height: 12px;
-    color: $granite-gray;
-    letter-spacing: 3.8px;
+    @include section-title;
     margin-bottom: 38px;
+    @media (max-width: $md+px) {
+      margin-bottom: 22px;
+      margin-top: 46px;
+    }
     @media (max-width: $sm+px) {
       line-height: 28px;
-      margin-bottom: 22px;
+      margin-top: 37px;
     }
   }
   &__top-text {
-    font-size: 14px;
-    line-height: 25px;
+    @include section-text;
     letter-spacing: 0.5px;
-    color: $gray-squirrel;
     margin-bottom: 55px;
+    @media (max-width: $md+px) {
+      margin-bottom: 25px;
+    }
   }
   &__icons-inner {
     margin: 0 auto;
@@ -86,13 +76,26 @@
     @media (max-width: $md+px) {
       text-align: center;
     }
+    @media (max-width: $sm+px) {
+      line-height: 20px;
+      margin-top: 30px;
+      margin-bottom: 25px;
+    }
   }
   &__bottom-inner {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 53px;
+    @media (max-width: 1110+px) {
+      margin-bottom: 27px;
+    }
     @media (max-width: $md+px) {
       flex-direction: column;
       align-items: center;
+      margin-bottom: 10px;
+    }
+    @media (max-width: $sm+px) {
+      margin-bottom: 5px;
     }
   }
   &__text {
@@ -122,6 +125,11 @@
       margin-right: 0;
       margin-bottom: 30px;
       width: 100%;
+      font-size: 14px;
+      line-height: 25px;
+    }
+    @media (max-width: $sm+px) {
+      margin-bottom: 15px;
     }
   }
   &__text-right {
