@@ -8,17 +8,16 @@
     padding: 0 13px;
   }
   &__title {
-    @include section-title;
     margin-top: 76px;
     @media (max-width: $md+px) {
-      margin-top: 48px;
+      margin-top: 50px;
     }
     @media (max-width: $sm+px) {
+      margin-top: 42px;
       margin-bottom: 34px;
     }
   }
   &__text {
-    @include section-text;
     @media (max-width: $md+px) {
       margin-bottom: 44px;
     }
@@ -177,7 +176,7 @@
       }
     }
     &::after {
-      content: (url(../../images/price/back-item-bottom-link-arrow.svg));
+      content: (url('../../images/price/back-item-bottom-link-arrow.svg'));
       position: absolute;
       top: 1px;
       right: 70px;

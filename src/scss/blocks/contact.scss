@@ -1,7 +1,6 @@
 .contact {
   background-color: $smoky-white;
   &__title {
-    @include section-title;
     @media (max-width: $md+px) {
       margin-top: 48px;
     }
@@ -10,7 +9,6 @@
     }
   }
   &__text {
-    @include section-text;
     @media (max-width: $md+px) {
       margin-bottom: 36px;
     }

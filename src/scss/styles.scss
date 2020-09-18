@@ -53,7 +53,26 @@ body{
   border-radius: 20px;
   padding: 12px 29px 12px 29px;
 }
-
+._title {
+  font-family: 'Source Sans Pro light';
+  line-height: 12px;
+  font-size: 21px;
+  color: $granite-gray;
+  letter-spacing: 3.8px;
+  margin-bottom: 36px;
+  margin-top: 76px;
+  text-align: center;
+}
+._text{
+  margin: 0 auto;
+  line-height: 25px;
+  color: $gray-squirrel;
+  text-align: center;
+  max-width: 500px;
+  letter-spacing: 0.6px;
+  padding: 0 15px;
+  margin-bottom: 58px;
+}
 @keyframes move {
   20% {
     transform: translateY(3px);
@@ -101,6 +120,16 @@ body{
   outline: none;
 }
 
+.noscript-info {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  z-index: 100;
+  font-size: 28px;
+  line-height: 36px;
+  padding: 25px;
+}
+
 @import "blocks/page-progress";
 @import "blocks/header";
 @import "blocks/intro";
@@ -113,7 +142,7 @@ body{
 
 @import "blocks/already";
 @import "blocks/testimonials";
-// @import "blocks/blog";
+@import "blocks/blog";
 @import "blocks/price";
 @import "blocks/subscribe";
 @import "blocks/contact";

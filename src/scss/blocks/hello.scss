@@ -2,6 +2,9 @@
   background-color: #fff;
   width: 100%;
   min-height: 487px;
+  @media (max-width: $sm+px) {
+    min-height: 366px;
+  }
   &__container {
     max-width: 843px;
     display: flex;
@@ -28,7 +31,6 @@
     }
   }
   &__info-title {
-    @include section-title;
     margin-top: 0;
     text-align: left;
     margin-bottom: 44px;
@@ -64,6 +66,9 @@
     text-align: center;
     @media (max-width: $md+px) {
       margin-top: 40px;
+    }
+    @media (max-width: $sm+px) {
+      display: none;
     }
   }
 }

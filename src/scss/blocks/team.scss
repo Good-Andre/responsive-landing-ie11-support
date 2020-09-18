@@ -1,40 +1,36 @@
 .team {
-  min-height: 771px;
-  @media (max-width: $md+px) {
-    min-height: 680px;
-  }
-  @media (max-width: 1180px) {
-    min-height: 730px;
-    padding-bottom: 55px;
-  }
-  @media (max-width: 720px) {
-    padding-bottom: 79px;
-  }
   &__title {
-    @include section-title;
     margin-top: 76px;
     @media (max-width: $md+px) {
-      margin-top: 42px;
+      margin-top: 50px;
     }
     @media (max-width: $sm+px) {
+      margin-top: 42px;
       margin-bottom: 30px;
     }
   }
   &__text {
-    @include section-text;
     margin: 0 auto;
     margin-bottom: 58px;
     @media (max-width: 720px) {
-      margin-bottom: 10px;
+      margin-bottom: 4px;
     }
-    @media (max-width: $sm+px) {
-      // margin-bottom: 5px;
-    }
+
   }
   &__slider {
     margin: 0 auto;
     max-width: 998px;
     padding: 0 15px;
+    margin-bottom: 165px;
+    @media (max-width: 1180px) {
+      margin-bottom: 124px;
+    }
+    @media (max-width: 720px) {
+      margin-bottom: 80px;
+    }
+    @media (max-width: $sm+px) {
+      margin-bottom: 68px;
+    }
   }
 }
 
@@ -58,10 +54,21 @@
       margin: 0 auto;
       width: 285px;
     }
+    @media (max-width: 355px) {
+      width: 100%;
+    }
+    > img{
+      @media (max-width: 355px) {
+        width: 100%;
+      height: auto;
+      }
+    }
   }
   &__hover {
+    transition: all 0.2s ease 0s;
     position: absolute;
-    width: 269px;
+    max-width: 269px;
+    width: 100%;
     height: 348px;
     bottom: 8px;
     left: 8px;
@@ -74,6 +81,7 @@
       margin: 0 auto;
       position: static;
       margin-bottom: 10px;
+
     }
     @media (max-width: $md+px) {
       opacity: 1;
@@ -117,7 +125,7 @@
       right: 0;
       top: 37px;
       display: block;
-      @media (max-width: 720px) {
+      @media (max-width: $md+px) {
         display: none;
       }
     }
@@ -175,6 +183,12 @@
     @media (max-width: 420px) {
       max-width: 330px;
     }
+    @media (max-width: 380px) {
+      max-width: 280px;
+    }
+    @media (max-width: 335px) {
+      max-width: 260px;
+    }
   }
   &__bar-line {
     height: 4px;
@@ -209,11 +223,9 @@
   }
 }
 // SLIDER DOTS
-.slick-dots {
+.team .slick-dots {
   display: flex;
   justify-content: center;
-  @media (max-width: 720px) {
-  }
   li {
     width: 10px;
     height: 10px;
@@ -228,11 +240,11 @@
 }
 .team-dots {
   margin-top: 65px;
-  @media (max-width: 1000px) {
-  }
   @media (max-width: 720px) {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 41px;
+  }
+  @media (max-width: $sm+px) {
+    margin-top: 34px;
   }
   &__item {
     cursor: pointer;

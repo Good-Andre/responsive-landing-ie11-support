@@ -5,7 +5,6 @@
   background-image: url('../images/subscribe/subscribe-bg.jpg');
   background-position: center;
   &__title {
-    @include section-title;
     color: #ffffff;
     margin-top: 82px;
     @media (max-width: $md+px) {
@@ -16,7 +15,6 @@
     }
   }
   &__text {
-    @include section-text;
     @media (max-width: $md+px) {
       margin-bottom: 42px;
     }
@@ -56,6 +54,9 @@
     &::placeholder{
       color: $very-pale;
       opacity: 1;
+    }
+    &:focus{
+        outline: 1px solid $gray-window;
     }
     @media (max-width: 580px) {
       width: 100%;

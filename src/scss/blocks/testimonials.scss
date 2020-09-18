@@ -2,7 +2,6 @@
   min-height: 650px;
   background-color: $smoky-white;
   &__title {
-    @include section-title;
     @media (max-width: $md+px) {
       margin-top: 50px;
     }
@@ -12,7 +11,6 @@
     }
   }
   &__text {
-    @include section-text;
     @media (max-width: $sm+px) {
       margin-bottom: 30px;
     }
@@ -23,14 +21,13 @@
     padding: 0 20px;
   }
   &__slider {
-    max-width: 970px;
     margin: 0 auto;
     min-height: 316px;
     display: block;
     background-color: #fff;
     padding-bottom: 60px;
     @media (max-width: $sm+px) {
-      padding-bottom: 44px;
+      padding-bottom: 28px;
     }
   }
 }
@@ -76,9 +73,10 @@
     font-size: 16px;
     margin-bottom: 22px;
     @media (max-width: $sm+px) {
-      margin: 0 20px 15px 20px;
-    }
-    @media (max-width: 332px) {
+      margin: 0 0px 15px 0px;
+      font-size: 14px;
+      line-height: 25px;
+      letter-spacing: 0.6px;
     }
   }
   &__name {
@@ -95,6 +93,24 @@
     color: $granite-gray;
     @media (max-width: $md+px) {
       margin-bottom: 38px;
+    }
+    @media (max-width: $sm+px) {
+      margin-bottom: 25px;
+    }
+  }
+}
+.testimonials .slick-dots {
+  display: flex;
+  justify-content: center;
+  li {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    @media (max-width: $sm+px) {
+      margin-right: 14px;
+    }
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

@@ -1,7 +1,7 @@
 $(function () {
   // menu burger
 
-  $('.menu__burger').click(function () {
+  $('.menu__burger').on('click', function () {
     $('.menu__burger,.header__menu-body').toggleClass('_active');
     if (!$('._overlay').hasClass('_overlay-show')) {
       $('._overlay').addClass('_overlay-show');
@@ -11,11 +11,11 @@ $(function () {
 
     if ($('.menu__burger').hasClass('_active')) {
 
-      $(document).bind('mousewheel DOMMouseScroll', function () {
+      $(document).on('mousewheel DOMMouseScroll', function () {
         stopWheel();
       });
     } else {
-      $(document).unbind('mousewheel DOMMouseScroll');
+      $(document).off('mousewheel DOMMouseScroll');
       if ($(document).scrollTop() > 700) {
       }
     }
@@ -28,7 +28,7 @@ $(function () {
   // smooth scrolling (for ie-11 support)
 
   let $page = $('html, body');
-  $('a[href*="#"]').click(function () {
+  $('a[href*="#"]').on('click', function () {
     $page.animate(
       {
         scrollTop: $($.attr(this, 'href')).offset().top,
@@ -38,15 +38,15 @@ $(function () {
     return false;
   });
 
-  $(window).resize(function () {
+  $(window).on('resize',function () {
     if ($(window).width() > 750) {
       deleteActiveClass();
     }
     // 750
     if ($(window).width() <= 750) {
-      $('.header__menu-link').bind('click', scrollTopFixMenu);
+      $('.header__menu-link').on('click', scrollTopFixMenu);
     } else {
-      $('.header__menu-link').bind('click', function (e) {
+      $('.header__menu-link').on('click', function (e) {
         $page.stop().animate(
           {
             scrollTop: $($.attr(this, 'href')).offset().top,
@@ -75,7 +75,7 @@ $(function () {
   function deleteActiveClass() {
     $('.menu__burger,.header__menu-body').removeClass('_active');
     $('._overlay').removeClass('_overlay-show');
-    $(document).unbind('mousewheel DOMMouseScroll');
+    $(document).off('mousewheel DOMMouseScroll');
   }
 
   function stopWheel(e) {
@@ -92,7 +92,7 @@ $(function () {
 
   // section about tabs
 
-  $('.tab-trigger').click(function () {
+  $('.tab-trigger').on('click', function () {
     let id = $(this).attr('data-tab'), // 1
       content = $('.tab-content[data-tab="' + id + '"]');
     $('.tab-trigger._active-tab').removeClass('_active-tab');
@@ -106,7 +106,7 @@ $(function () {
   let win = $(window);
   let doc = $(document);
 
-  win.scroll(function () {
+  win.on('scroll',function () {
     scrollProgress();
   });
 
@@ -123,7 +123,7 @@ $(function () {
 
   $('.team__slider').slick({
     dots: true,
-    customPaging: function (slider, i) {
+    customPaging: function () {
       return `<div class="team-dots">
       <div class="team-dots__item">
       </div>
@@ -132,13 +132,13 @@ $(function () {
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 5000,
   });
 
   $('.testimonials__slider').slick({
     dots: true,
-    customPaging: function (slider, i) {
+    customPaging: function () {
       return `<div class="testimonials-dots">
       <div class="testimonials-dots__item">
       </div>
@@ -151,7 +151,22 @@ $(function () {
     autoplaySpeed: 5000,
   });
 
-  $('.overlay-map__button').click(function () {
+  $('.blog__slider').slick({
+    dots: true,
+    customPaging: function () {
+      return `<div class="blog-dots">
+      <div class="blog-dots__item">
+      </div>
+    </div>`;
+    },
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  });
+
+  $('.overlay-map__button').on('click', function () {
     $('.overlay-map').addClass('_overlay-hide');
   });
 
@@ -160,7 +175,7 @@ $(function () {
     $('.scroll-up').addClass('scroll-up--show');
   }
   
-  $(document).scroll(function () {
+  $(document).on('scroll',function () {
       if ($(document).scrollTop() > 700) {
         $('.scroll-up').addClass('scroll-up--show');
       } else if ($(document).scrollTop() < 700) {
@@ -169,5 +184,4 @@ $(function () {
   });
 
   scrollProgress();
-  $(window).resize();
 });

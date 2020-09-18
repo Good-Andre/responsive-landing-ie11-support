@@ -9,19 +9,17 @@
     margin: 0 auto;
   }
   &__top-title {
-    @include section-title;
     margin-bottom: 38px;
     @media (max-width: $md+px) {
       margin-bottom: 22px;
-      margin-top: 46px;
+      margin-top: 50px;
     }
     @media (max-width: $sm+px) {
       line-height: 28px;
-      margin-top: 37px;
+      margin-top: 35px;
     }
   }
   &__top-text {
-    @include section-text;
     letter-spacing: 0.5px;
     margin-bottom: 55px;
     @media (max-width: $md+px) {
