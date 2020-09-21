@@ -8,21 +8,45 @@ $(function () {
     } else {
       $('._overlay').removeClass('_overlay-show');
     }
-
     if ($('.menu__burger').hasClass('_active')) {
-
-      $(document).on('mousewheel DOMMouseScroll', function () {
-        stopWheel();
-      });
+      disableScroll();
     } else {
-      $(document).off('mousewheel DOMMouseScroll');
-      if ($(document).scrollTop() > 700) {
-      }
+      enableScroll();
     }
   });
 
+  function disableScroll(e){
+    let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+    let header = document.querySelector('.header');
+    document.body.style.paddingRight = paddingOffset;
+    header.style.paddingRight = paddingOffset;
+    let pagePosition = window.scrollY;
+    document.body.classList.add('_disable-scroll');
+    document.body.dataset.position = pagePosition;
+    document.body.style.top = -pagePosition + 'px';
+    header.style.top = window.scrollY;
+    document.body.classList.add('has-disable');
+  }
+  
+  function enableScroll(e){
+    let pagePosition = parseInt(document.body.dataset.position, 10);
+    let header = document.querySelector('.header');
+    document.body.style.top = 'auto';
+    document.body.classList.remove('_disable-scroll');
+    document.body.style.paddingRight = '0px';
+    header.style.paddingRight = '0px';
+    window.scroll({top: pagePosition, left: 0});
+    document.body.removeAttribute('data-position');
+  }
+
+  function deleteActiveClass() {
+    $('.menu__burger,.header__menu-body').removeClass('_active');
+    $('._overlay').removeClass('_overlay-show');
+  }
+
   $('._overlay').on('click', function () {
     deleteActiveClass();
+    enableScroll();
   });
 
   // smooth scrolling (for ie-11 support)
@@ -38,11 +62,15 @@ $(function () {
     return false;
   });
 
-  $(window).on('resize',function () {
+  $(window).on('resize', function () {
     if ($(window).width() > 750) {
       deleteActiveClass();
+      if ($('body').hasClass('has-disable')) {
+        enableScroll();
+        $('body').removeClass('has-disable');
+      }
     }
-    // 750
+
     if ($(window).width() <= 750) {
       $('.header__menu-link').on('click', scrollTopFixMenu);
     } else {
@@ -70,25 +98,10 @@ $(function () {
     e.preventDefault();
   }
 
-  $('.header__menu-link').on('click', deleteActiveClass);
-
-  function deleteActiveClass() {
-    $('.menu__burger,.header__menu-body').removeClass('_active');
-    $('._overlay').removeClass('_overlay-show');
-    $(document).off('mousewheel DOMMouseScroll');
-  }
-
-  function stopWheel(e) {
-    if (!e) {
-      /* IE7, IE8, Chrome, Safari */
-      e = window.event;
-    }
-    if (e.preventDefault) {
-      /* Chrome, Safari, Firefox */
-      e.preventDefault();
-    }
-    e.returnValue = false; /* IE7, IE8 */
-  }
+  $('.header__menu-link').on('click', function(){
+    deleteActiveClass();
+      enableScroll();
+  });
 
   // section about tabs
 
@@ -106,7 +119,7 @@ $(function () {
   let win = $(window);
   let doc = $(document);
 
-  win.on('scroll',function () {
+  win.on('scroll', function () {
     scrollProgress();
   });
 
@@ -174,13 +187,33 @@ $(function () {
   if ($(document).scrollTop() > 700) {
     $('.scroll-up').addClass('scroll-up--show');
   }
-  
-  $(document).on('scroll',function () {
-      if ($(document).scrollTop() > 700) {
-        $('.scroll-up').addClass('scroll-up--show');
-      } else if ($(document).scrollTop() < 700) {
-        $('.scroll-up').removeClass('scroll-up--show');
-      }
+
+  $(document).on('scroll', function () {
+    if ($(document).scrollTop() > 700) {
+      $('.scroll-up').addClass('scroll-up--show');
+    } else if ($(document).scrollTop() < 700) {
+      $('.scroll-up').removeClass('scroll-up--show');
+    }
+  });
+
+  // portfolio filter
+
+  let filter = $('[data-filter]');
+  filter.on('click', function (event) {
+    event.preventDefault();
+    let cat = $(this).data('filter');
+    if (cat == 'all') {
+      $('[data-cat]').removeClass('_hide');
+    } else {
+      $('[data-cat]').each(function () {
+        let workCat = $(this).data('cat');
+        if (workCat != cat) {
+          $(this).addClass('_hide');
+        } else {
+          $(this).removeClass('_hide');
+        }
+      });
+    }
   });
 
   scrollProgress();

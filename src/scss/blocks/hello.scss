@@ -1,75 +1,94 @@
 .hello {
-  background-color: #fff;
   width: 100%;
   min-height: 487px;
+  background-color: #fff;
+
   @media (max-width: $sm+px) {
     min-height: 366px;
   }
+
   &__container {
-    max-width: 843px;
     display: flex;
     justify-content: space-between;
+    max-width: 843px;
     padding: 0 20px;
+
     @media (max-width: $md+px) {
       flex-direction: column;
-      margin-bottom: 15px;
       margin-top: 40px;
+      margin-bottom: 15px;
     }
+
     @media (max-width: $sm+px) {
       margin-top: 0;
     }
   }
+
   &__info {
     flex: 0 0 495px;
-    margin-right: 15px;
     margin-top: 110px;
+    margin-right: 15px;
+
     @media (max-width: $md+px) {
       flex: 0 0 auto;
+      width: 100%;
       max-width: 600px;
       margin: 10px auto 0;
-      width: 100%;
     }
   }
+
   &__info-title {
     margin-top: 0;
-    text-align: left;
     margin-bottom: 44px;
+    text-align: left;
+
     @media (max-width: $md+px) {
-      text-align: center;
       margin-bottom: 30px;
+      text-align: center;
     }
+
     @media (max-width: $sm+px) {
       margin-top: 32px;
     }
   }
+
   &__info-text {
+    margin-bottom: 29px;
     line-height: 25px;
     color: $gray-squirrel;
     letter-spacing: 0.5px;
-    margin-bottom: 29px;
+
     @media (max-width: $md+px) {
       text-align: center;
     }
   }
+
   &__info-btn {
     @media (max-width: $md+px) {
       display: block;
       margin: 0 auto;
     }
-      &:hover{
-        color: #fff;
-        background-color: $granite-gray;
-      }
+
+    &:hover {
+      color: #fff;
+      background-color: $granite-gray;
+    }
+
+    @media (max-width: $sm+px) {
+      margin-bottom: 25px;
+    }
   }
+
   &__image-block {
     margin-top: 80px;
     text-align: center;
+
     @media (max-width: $md+px) {
       margin-top: 40px;
     }
+
     @media (max-width: $sm+px) {
       display: none;
     }
   }
 }
-

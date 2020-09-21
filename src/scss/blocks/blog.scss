@@ -4,141 +4,171 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   &__container {
     max-width: 1230px;
     padding: 0 40px;
+
     @media (max-width: $md+px) {
       padding: 0 20px 0 20px;
     }
   }
+
   &__title {
+    color: #fff;
     text-align: left;
-    color: #ffffff;
+
     @media (max-width: $md+px) {
-      text-align: center;
       margin-top: 52px;
+      text-align: center;
     }
+
     @media (max-width: $sm+px) {
       margin-top: 46px;
     }
   }
+
   &__text {
-    text-align: left;
-    margin-left: 0;
     padding-left: 0;
-    margin-bottom: 98px;
+    margin: 0 auto 98px 0;
     color: $gray-window;
+    text-align: left;
+
     @media (max-width: $md+px) {
-      text-align: center;
-      margin-left: auto;
       margin-bottom: 50px;
+      margin-left: auto;
+      text-align: center;
     }
+
     @media (max-width: $sm+px) {
       margin-bottom: 34px;
     }
   }
+
   &__slider {
-    margin-bottom: 104px;
-    padding: 0 50px 0 50px;
     position: relative;
+    padding: 0 50px 0 50px;
+    margin-bottom: 104px;
+
     @media (max-width: $md+px) {
       padding: 0 30px 0 30px;
       margin-bottom: 23px;
     }
+
     @media (max-width: $sm+px) {
       padding: 0;
     }
   }
 }
+
 .slider-item {
   padding: 0 3px;
 }
+
 .item-slider {
-  @media (max-width: $sm+px) {
-  }
   &__title {
-    font-size: 20px;
-    color: $very-pale;
-    line-height: 20px;
-    letter-spacing: 0.4px;
     margin-bottom: 13px;
+    font-size: 20px;
+    line-height: 20px;
+    color: $very-pale;
+    letter-spacing: 0.4px;
   }
+
   &__name {
-    font-family: 'Source Sans Pro light';
-    font-style: italic;
     margin-bottom: 17px;
+    font: italic 'Source Sans Pro light', sans-serif;
     color: $crayola-green-jungle;
+
     @media (max-width: $sm+px) {
       margin-bottom: 13px;
     }
   }
+
   &__stats {
+    margin-bottom: 52px;
+    font-family: 'Source Sans Pro light', sans-serif;
+    color: $gray-brown;
+    letter-spacing: 1px;
+
     @media (max-width: $md+px) {
       margin-bottom: 30px;
     }
-    font-family: 'Source Sans Pro light';
-    letter-spacing: 1px;
-    color: $gray-brown;
-    margin-bottom: 52px;
   }
+
   &__text {
+    max-width: 582px;
+    margin-bottom: 46px;
+    line-height: 25px;
     color: $gray-squirrel;
     letter-spacing: 0.5px;
-    line-height: 25px;
-    margin-bottom: 46px;
-    max-width: 582px;
+
     @media (max-width: $md+px) {
       margin-bottom: 30px;
     }
   }
+
   &__link {
     display: inline-block;
     width: 100px;
     font-size: 16px;
     color: $gray-window;
+
     &:hover {
       color: $very-pale;
     }
   }
 }
+
 .blog .slick-dots {
   position: absolute;
-  right: -10px;
   top: 50px;
+  right: -10px;
   display: block;
+
   li {
     margin-bottom: 10px;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
+
+  @media (max-width: 1338px) {
+    right: 30px;
+  }
+
   @media (max-width: $md+px) {
     position: static;
     display: flex;
     justify-content: center;
     margin-top: 23px;
+
     li {
       width: 10px;
       height: 10px;
       margin-right: 10px;
+
       @media (max-width: $sm+px) {
         margin-right: 14px;
       }
+
       &:last-child {
         margin-right: 0;
       }
     }
   }
 }
+
 .blog-dots {
   &__item {
-    cursor: pointer;
     width: 10px;
     height: 10px;
-    border-radius: 50%;
+    cursor: pointer;
     border: 1px solid $gray-window;
+    border-radius: 50%;
   }
 }
+
 .slick-active .blog-dots__item {
   background-color: $gray-window;
 }

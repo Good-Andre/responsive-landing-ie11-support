@@ -1,33 +1,40 @@
 .already {
-  background-color: #0A0A0A;
+  height: 201px;
+  background-color: #0a0a0a;
   background-image: url('../images/already/already-bg-3.jpg');
   background-position: center;
-  height: 201px;
+
   @media (max-width: $sm+px) {
     height: 100%;
   }
+
   &__container {
-    text-align: center;
     width: 100%;
+    text-align: center;
   }
+
   &__title {
-    font-size: 20px;
-    line-height: 25px;
-    letter-spacing: 0.4px;
-    color: #ffffff;
     margin-top: 52px;
     margin-bottom: 29px;
+    font-size: 20px;
+    line-height: 25px;
+    color: #fff;
+    letter-spacing: 0.4px;
+
     @media (max-width: $sm+px) {
       margin-top: 35px;
     }
   }
+
   &__button {
-    color: #ffffff;
+    color: #fff;
     border: 1px solid #fff;
-    &:hover{
-      background-color: #fff;
+
+    &:hover {
       color: $granite-gray;
+      background-color: #fff;
     }
+
     @media (max-width: $sm+px) {
       margin-bottom: 42px;
     }

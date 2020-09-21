@@ -1,0 +1,238 @@
+.projects {
+  // &__container {
+  //   max-width: 1366px;
+  // }
+
+  &__title {
+    @media (max-width: $md+px) {
+      margin-top: 50px;
+    }
+
+    @media (max-width: $sm+px) {
+      margin-top: 42px;
+    }
+  }
+
+  &__text {
+    @media (max-width: $md+px) {
+      margin-bottom: 46px;
+    }
+
+    @media (max-width: $sm+px) {
+      margin-bottom: 34px;
+    }
+  }
+
+  &__bg {
+    background: #070707;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 38px 0;
+    background-color: #1ba486;
+    background-image: url('../images/projects/featured-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    transition: all 0.3s ease 0s;
+
+    // @media (max-width: $md+px) {
+    //   margin-top: 20px;
+    // }
+
+    @media (max-width: 990px) {
+      flex-direction: column;
+      padding: 30px 0 36px 0;
+    }
+  }
+
+  &__bottom-text {
+    margin-right: 7%;
+    font-size: 20px;
+    line-height: 28px;
+    color: #fff;
+
+    span {
+      font-weight: bold;
+    }
+
+    @media (max-width: 990px) {
+      width: 100%;
+      padding: 0 20px;
+      margin: 0 0 20px 0;
+      text-align: center;
+    }
+  }
+
+  &__bottom-btn {
+    color: #fff;
+    border: 1px solid #fff;
+
+    &:hover {
+      color: $crayola-green-jungle;
+      background-color: #fff;
+    }
+  }
+}
+
+.accordion {
+  width: 100%;
+  max-width: 1366px;
+  height: 319px;
+  margin: 0 auto;
+
+  ul {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: $md+px) {
+      overflow: hidden;
+    }
+
+    @media (max-width: $md+px) {
+      flex-direction: column;
+    }
+  }
+
+  li {
+    width: 100%;
+    height: 319px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: width 400ms ease;
+  }
+
+  ul li div {
+    position: relative;
+  }
+
+  a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 319px;
+    transition: background 0.3s ease 0s;
+
+    @media (min-width: $md+px) {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    @media (max-width: $md+px) {
+      align-items: flex-end;
+      height: 250px;
+    }
+  }
+
+  p {
+    font-family: 'Source Sans Pro light', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+    letter-spacing: 2px;
+    opacity: 1;
+    transition: all 0.2s ease 0s;
+
+    @media (max-width: $md+px) {
+      width: 100%;
+      padding: 5px 10px;
+      margin-bottom: 0;
+      color: $very-pale;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &__cross {
+    @media screen and (min-width: $md+px) {
+      position: relative;
+      display: none;
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: '';
+        background-color: #fff;
+      }
+
+      &::after {
+        top: 0;
+        left: -17px;
+        width: 35px;
+        height: 1px;
+      }
+
+      &::before {
+        top: -15px;
+        left: 0;
+        width: 1px;
+        height: 35px;
+      }
+    }
+  }
+}
+
+.accordion ul:hover li:hover .accordion__cross {
+  display: block;
+}
+
+// NEED OPTIMIZED IMAGES
+.accordion ul li {
+  background-color: #34c0a5;
+
+  @media (max-width: $md+px) {
+    height: 250px;
+  }
+}
+
+.accordion ul li:nth-child(1) {
+  background-image: url('../images/projects/accord-0.jpg');
+  background-size: cover;
+}
+
+.accordion ul li:nth-child(2) {
+  background-image: url('../images/projects/accord-2.jpg');
+  background-size: cover;
+}
+
+.accordion ul li:nth-child(3) {
+  background-image: url('../images/projects/accord-1.jpg');
+  background-size: cover;
+}
+
+@media screen and (min-width: $md+px) {
+  .accordion ul li:hover {
+    // @media (max-width: 1366px) {
+    width: 200%;
+    // }
+  }
+}
+
+.accordion ul:hover li:hover > div a p {
+  @media screen and (min-width: $md+px) {
+    display: none;
+  }
+}
+
+.accordion ul:hover li:hover a {
+  background: rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width: $md+px) {
+  body {
+    margin: 0;
+  }
+
+  .accordion {
+    height: auto;
+  }
+
+  .accordion ul li {
+    width: 100%;
+  }
+}

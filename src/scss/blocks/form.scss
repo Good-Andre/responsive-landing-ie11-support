@@ -1,14 +1,17 @@
 .form-section {
   max-height: 552px;
   background-color: #fff;
+
   &__container {
     max-width: 981px;
     padding: 0 20px;
+
     @media (max-width: $md+px) {
       max-width: 564px;
     }
   }
 }
+
 .form {
   &__inner {
     display: flex;
@@ -22,59 +25,78 @@
       margin-bottom: 0;
     }
   }
-  &__inner-item{
-    border: 1px solid #D3D8DC;
-    font-size: 14px;
-    max-width: 287px;
+
+  &__inner-item {
     width: 100%;
-    line-height: 41px;
+    max-width: 287px;
     height: 41px;
     padding-left: 20px;
     margin-right: 15px;
+    font-size: 14px;
+    line-height: 41px;
     color: $granite-gray;
-    &:last-child{
+    border: 1px solid #d3d8dc;
+
+    &:last-child {
       margin-right: 0;
     }
+
+    &:focus {
+      outline: 1px solid $gray-window;
+    }
+
     @media (max-width: $md+px) {
-      margin-bottom: 15px;
       max-width: none;
+      margin-bottom: 15px;
     }
   }
+
   &__textarea {
-    border: 1px solid #D3D8DC;
     width: 100%;
-    margin-bottom: 30px;
     height: 190px;
-    resize: none;
     padding: 15px;
+    margin-bottom: 30px;
     color: $granite-gray;
+    resize: none;
+    border: 1px solid #d3d8dc;
+
+    &:focus {
+      outline: 1px solid $gray-window;
+    }
+
     @media (max-width: $md+px) {
       max-width: 522px;
       margin-bottom: 15px;
     }
+
     @media (max-width: $sm+px) {
       height: 100px;
     }
   }
+
   &__submit {
-    background-color: $crayola-green-jungle;
-    font-size: 16px;
-    color: #ffffff;
     display: block;
-    cursor: pointer;
     width: 100%;
-    line-height: 53px;
     margin-bottom: 129px;
-    &:hover{
+    font-size: 16px;
+    line-height: 53px;
+    color: #fff;
+    cursor: pointer;
+    background-color: $crayola-green-jungle;
+
+    &:hover {
       background-color: $turquoise;
     }
+
     @media (max-width: $xl+px) {
       margin-bottom: 80px;
     }
+
     @media (max-width: $md+px) {
       max-width: 522px;
       margin-bottom: 42px;
     }
+
     @media (max-width: $sm+px) {
       font-size: 14px;
       line-height: 41px;

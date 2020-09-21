@@ -1,36 +1,38 @@
 .intro {
-  min-height: 100vh;
   position: relative;
-  background-color: #534e47;
+  min-height: 100vh;
   background: url('../images/header/intro-bg.jpg') 0 0 no-repeat;
+  background-color: #534e47;
   background-size: cover;
   transition: all 0.3s ease 0s;
+
   @media (max-width: $xl+px) {
     min-height: auto;
   }
-  @media (max-width: $md+px) {
-  }
+
   &::after {
-    content: '';
     position: absolute;
-    left: 0;
     top: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
     background-color: rgba(28, 27, 27, 0.4);
   }
+
   &__body {
     position: relative;
     z-index: 1;
   }
 }
+
 .body-intro {
   &__content {
-    height: calc(100vh - 225px);
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: calc(100vh - 225px);
     margin-top: 113px;
     text-align: center;
     transition: all 0.3s ease 0s;
@@ -38,31 +40,37 @@
     @media (max-width: $xl+px) {
       height: 486px;
     }
+
     @media (max-width: $md+px) {
-      margin-top: 50px;
       height: 480px;
+      margin-top: 50px;
     }
+
     @media (max-width: $sm+px) {
       height: 350px;
     }
   }
+
   &__button {
-    img {
-      margin-top: 2px;
-    }
-    text-align: center;
     display: block;
     width: 36px;
     height: 36px;
     margin: 0 auto 76px auto;
-    border-radius: 50%;
-    background-color: $crayola-green-jungle;
+    text-align: center;
     cursor: pointer;
+    background-color: $crayola-green-jungle;
+    border-radius: 50%;
     transition: background-color 0.2s ease 0s;
     animation: move 0.7s infinite linear;
+
+    img {
+      margin-top: 2px;
+    }
+
     @media (max-width: 768px) {
       animation: none;
     }
+
     @media (max-width: $md+px) {
       display: none;
     }
@@ -73,49 +81,57 @@
     }
   }
 }
+
 .content-intro {
   &__title {
-    font-family: 'Source Sans Pro light';
+    font-family: 'Source Sans Pro light', sans-serif;
     font-size: 35px;
     line-height: 70px;
-    color: #ffffff;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 7px;
     transition: all 0.4s ease 0s;
+
     @media (min-width: $xl+px) {
-      font-size: 44px;
       margin-bottom: 19px;
+      font-size: 44px;
     }
+
     @media (max-width: $md+px) {
       width: 100%;
       max-width: 488px;
     }
+
     @media (min-width: $md+px) {
       font-size: 40px;
     }
+
     @media (max-width: $sm+px) {
-      line-height: 40px;
-      font-size: 30px;
-      margin-bottom: 10px;
-      margin-top: 20px;
       padding: 0 20px;
+      margin: 20px 0 10px 0;
+      font-size: 30px;
+      line-height: 40px;
     }
   }
+
   &__text {
-    transition: all 0.4s ease 0s;
+    max-width: 603px;
     font-size: 16px;
     line-height: 28px;
-    color: #ffffff;
-    max-width: 603px;
+    color: #fff;
+    transition: all 0.4s ease 0s;
+
     @media (min-width: $xl+px) {
-      font-size: 18px;
       max-width: 623px;
+      font-size: 18px;
     }
+
     @media (max-width: $md+px) {
+      width: 100%;
       padding: 0 13px;
       font-size: 15px;
-      width: 100%;
     }
+
     @media (max-width: $sm+px) {
       font-size: inherit;
     }

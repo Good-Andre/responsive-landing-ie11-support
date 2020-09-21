@@ -1,185 +1,216 @@
 .price {
-  background-color: $smoky-white;
   min-height: 638px;
-  @media (max-width: $md+px) {
-  }
+  background-color: $smoky-white;
+
   &__container {
     max-width: 857px;
     padding: 0 13px;
   }
+
   &__title {
     margin-top: 76px;
+
     @media (max-width: $md+px) {
       margin-top: 50px;
     }
+
     @media (max-width: $sm+px) {
       margin-top: 42px;
       margin-bottom: 34px;
     }
   }
+
   &__text {
     @media (max-width: $md+px) {
       margin-bottom: 44px;
     }
+
     @media (max-width: $sm+px) {
       margin-bottom: 34px;
     }
   }
+
   &__cards {
     display: flex;
     justify-content: space-between;
+
     @media (max-width: $md+px) {
       flex-direction: column;
       margin-bottom: 30px;
     }
   }
+
   &__item {
     position: relative;
+    display: flex;
     width: 234px;
     height: 302px;
-    display: flex;
+
     @media (max-width: $md+px) {
-      margin-bottom: 13px;
       width: 100%;
       height: auto;
-      box-shadow: 1px 1px 0px 0px rgba(228, 228, 228, 1);
+      margin-bottom: 13px;
+      box-shadow: 1px 1px 0 0 rgba(228, 228, 228, 1);
     }
+
     @media (min-width: $md+px) {
       &:hover > .front-item {
         transform: rotateX(-180deg);
       }
+
       &:hover > .back-item {
         transform: rotateX(0deg);
       }
     }
   }
 }
+
 .front-item,
 .back-item {
-  background-color: #fff;
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
   backface-visibility: hidden;
+  background-color: #fff;
+  box-shadow: 1px 1px 0 0 rgba(228, 228, 228, 1);
   transition: transform 0.3s linear;
-  box-shadow: 1px 1px 0px 0px rgba(228, 228, 228, 1);
+
   @media (max-width: $md+px) {
     position: static;
-    overflow: visible;
     width: 100%;
     height: auto;
+    overflow: visible;
     box-shadow: none;
     transition: none;
   }
 }
+
 .front-item {
   transform: rotateX(0deg);
+
   @media (max-width: $md+px) {
     width: 80%;
   }
+
   &__top {
-    background-color: #19bd9a;
     height: 67px;
+    background-color: #19bd9a;
+
     @media (max-width: $md+px) {
-      height: 0px;
+      height: 0;
     }
   }
+
   &__top-title {
-    color: #ffffff;
-    text-align: center;
-    font-weight: bold;
     font-size: 20px;
+    font-weight: bold;
     line-height: 67px;
+    color: #fff;
+    text-align: center;
+
     @media (max-width: $md+px) {
-      background-color: #fff;
-      color: $gray-squirrel;
-      line-height: 20px;
       margin-top: 38px;
+      line-height: 20px;
+      color: $gray-squirrel;
+      background-color: #fff;
     }
   }
+
   &__cost {
-    font-family: 'Source Sans Pro Black';
     margin-top: 70px;
-    color: $light-green-sea;
+    font-family: 'Source Sans Pro Black', sans-serif;
     font-size: 42px;
+    color: $light-green-sea;
     text-align: center;
+
     @media (max-width: $md+px) {
       margin-top: 28px;
       font-size: 30px;
     }
   }
+
   &__text {
-    color: $gray-squirrel;
-    text-align: center;
     font-size: 20px;
     line-height: 28px;
+    color: $gray-squirrel;
+    text-align: center;
   }
 }
+
 .back-item {
-  background-color: #fff;
-  transform: rotateX(180deg);
   display: flex;
   flex-direction: column;
   padding-top: 24px;
+  background-color: #fff;
+  transform: rotateX(180deg);
+
   @media (max-width: $md+px) {
-    padding-top: 0px;
+    padding-top: 0;
     transform: none;
   }
+
   &__text-inner {
     flex: 1 0 auto;
+
     @media (max-width: $md+px) {
       padding-top: 15px;
     }
   }
+
   &__text {
+    margin-left: 32px;
     line-height: 31px;
     color: $gray-squirrel;
-    margin-left: 32px;
+
     @media (max-width: $md+px) {
+      margin: 0 0 13px 0;
       line-height: 16px;
-      margin-bottom: 13px;
       text-align: center;
-      margin-left: 0px;
     }
   }
+
   &__bottom-link {
-    flex: 0 0 auto;
-    font-size: 16px;
-    height: 67px;
-    line-height: 67px;
-    display: block;
-    background-color: #19bd9a;
-    color: #ffffff;
     position: relative;
+    display: block;
+    flex: 0 0 auto;
+    height: 67px;
     padding: 0 70px;
-    &:hover{
+    font-size: 16px;
+    line-height: 67px;
+    color: #fff;
+    background-color: #19bd9a;
+
+    &:hover {
       background-color: $turquoise;
     }
+
     @media (max-width: $md+px) {
+      width: 134px;
       height: auto;
-      line-height: 16px;
-      background-color: #fff;
-      color: #fff;
-      background: #19bd9a;
+      padding: 11px 28px 11px 28px;
+      margin: 6px auto 15px auto;
       font-size: 16px;
-      transition: all 0.2s ease 0s;
+      line-height: 16px;
+      color: #fff;
+      background-color: #19bd9a;
       border: 1px solid #19bd9a;
       border-radius: 20px;
-      padding: 11px 28px 11px 28px;
-      width: 134px;
-      margin: 6px auto 15px auto;
-      &:hover{
-        border: 1px solid $gray-squirrel;
+      transition: all 0.2s ease 0s;
+
+      &:hover {
         color: $gray-squirrel;
         background-color: #fff;
+        border: 1px solid $gray-squirrel;
       }
     }
+
     &::after {
-      content: (url('../../images/price/back-item-bottom-link-arrow.svg'));
       position: absolute;
       top: 1px;
       right: 70px;
+      content: (url('../../images/price/back-item-bottom-link-arrow.svg'));
+
       @media (max-width: $md+px) {
         display: none;
       }
