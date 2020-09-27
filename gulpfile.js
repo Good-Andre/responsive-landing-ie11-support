@@ -67,7 +67,7 @@ function html() {
 function js() {
   return (
     src(path.src.js)
-      .pipe(uglify())
+      // .pipe(uglify())
       .pipe(
         gulpRename({
           extname: '.min.js',

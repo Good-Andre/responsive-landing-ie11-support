@@ -12,7 +12,7 @@
   }
 
   &__top-title {
-    margin-bottom: 38px;
+    // margin-bottom: 38px;
 
     @media (max-width: $md+px) {
       margin-top: 50px;
@@ -26,8 +26,8 @@
   }
 
   &__top-text {
-    margin-bottom: 55px;
-    letter-spacing: 0.5px;
+    // margin-bottom: 55px;
+    // letter-spacing: 0.5px;
 
     @media (max-width: $md+px) {
       margin-bottom: 25px;
@@ -42,53 +42,33 @@
   }
 
   &__icon-item {
-    width: 54px;
-    height: 54px;
-    cursor: pointer;
-    background-color: #7b7f88;
-    border-radius: 50%;
-
     &:first-child {
-      padding-top: 12px;
-      padding-left: 11px;
+      padding: 12px 11px;
     }
 
     &:nth-child(2) {
-      padding-top: 9px;
-      padding-left: 11px;
+      padding: 9px 11px;
     }
 
     &:last-child {
-      padding-top: 10px;
-      padding-left: 11px;
+      padding: 10px 11px;
     }
 
     img {
       display: block;
     }
-
-    &:hover {
-      background-color: #a1a5ae;
-    }
   }
+}
 
-  &__icon-item._active-tab {
-    background-color: #31bfa8;
-  }
+.bottom-about {
+  display: none;
 
-  &__bottom {
-    display: none;
-  }
-
-  &__bottom._active-tab {
+  &._active-tab {
     display: block;
   }
 
   &__sub-title {
-    font-size: 20px;
     line-height: 100px;
-    color: $gray-brown;
-    letter-spacing: 0.4px;
 
     @media (max-width: $md+px) {
       text-align: center;
@@ -101,7 +81,7 @@
     }
   }
 
-  &__bottom-inner {
+  &__inner {
     display: flex;
     justify-content: space-between;
     margin-bottom: 53px;
@@ -123,32 +103,16 @@
 
   &__text {
     margin-bottom: 30px;
-    line-height: 28px;
-    color: $gray-squirrel;
-    letter-spacing: 0.5px;
 
     @media (max-width: $md+px) {
       padding: 0 20px;
       text-align: center;
-    }
-
-    span {
-      font-weight: bold;
-    }
-
-    .color-light {
-      color: #14be9a;
-    }
-
-    .color-dark {
-      color: #5a6067;
     }
   }
 
   &__text-left {
     width: 33%;
     margin-right: 20px;
-    font-size: 16px;
 
     @media (max-width: $md+px) {
       width: 100%;
@@ -165,8 +129,6 @@
 
   &__text-right {
     width: 56%;
-    font-size: 14px;
-    line-height: 25px;
     word-wrap: break-word;
 
     @media (max-width: $md+px) {
