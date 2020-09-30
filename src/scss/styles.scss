@@ -4,10 +4,13 @@
 @import 'fonts';
 @import 'vars';
 
-body {
-  // height: 100%;
-  font-family: $fontFamily;
+:root {
   font-size: 14px;
+}
+
+body {
+  font-family: $fontFamily;
+  font-size: 1rem;
 }
 
 .wrapper {
@@ -39,7 +42,7 @@ body {
 
 ._btn {
   padding: 12px 29px 12px 29px;
-  font-size: 16px;
+  font-size: 1.14rem;
   line-height: 12px;
   background: none;
   border: 1px solid $granite-gray;
@@ -50,7 +53,9 @@ body {
 ._title {
   margin-top: 76px;
   margin-bottom: 36px;
-  font: 21px/12px 'Source Sans Pro light', sans-serif;
+  font-family: 'Source Sans Pro light', sans-serif;
+  font-size: 1.5rem;
+  line-height: 12px;
   color: $granite-gray;
   text-align: center;
   text-transform: uppercase;
@@ -127,18 +132,22 @@ body {
   outline: none;
 }
 
+.slick-list.dragging {
+  cursor: default;
+}
+
 ._noscript-info {
   z-index: 100;
   width: 100%;
   padding: 25px;
-  font-size: 28px;
+  font-size: 2rem;
   line-height: 36px;
   text-align: center;
   background-color: #fff;
 }
 
 ._sub-title {
-  font-size: 20px;
+  font-size: 1.42rem;
   color: $gray-brown;
   letter-spacing: 0.4px;
 }
@@ -159,12 +168,12 @@ body {
 }
 
 ._text-l {
-  font-size: 16px;
+  font-size: 1.14rem;
   line-height: 28px;
 }
 
 ._text-r {
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 25px;
 }
 
@@ -195,7 +204,7 @@ body {
 @import 'blocks/impressed';
 @import 'blocks/portfolio';
 @import 'blocks/team';
-// @import 'blocks/services';
+@import 'blocks/services';
 @import 'blocks/already';
 @import 'blocks/testimonials';
 @import 'blocks/blog';

@@ -2,6 +2,7 @@ $(function () {
   let header = document.querySelector('.header');
   let win = $(window);
   let doc = $(document);
+  let $page = $('html, body');
 
   // Menu burger
 
@@ -18,6 +19,8 @@ $(function () {
       enableScroll();
     }
   });
+
+  // Disable/Enable Scroll for Fix Menu
 
   function disableScroll() {
     let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
@@ -37,7 +40,7 @@ $(function () {
     document.body.classList.remove('_disable-scroll');
     document.body.style.paddingRight = '0px';
     header.style.paddingRight = '0px';
-    $("html, body").scrollTop( pagePosition );
+    $page.scrollTop(pagePosition);
     document.body.removeAttribute('data-position');
   }
 
@@ -53,7 +56,6 @@ $(function () {
 
   // Smooth scrolling (for ie-11 support)
 
-  let $page = $('html, body');
   $('a[href*="#"]').on('click', function () {
     $page.animate(
       {
@@ -62,45 +64,6 @@ $(function () {
       400
     );
     return false;
-  });
-
-  // Resize event
-
-  win.on('resize', function () {
-    if (win.width() > 750) {
-      if (!$('body').hasClass('has-disable')) {
-        deleteActiveClass();
-      }
-    }
-
-    if (win.width() > 767) {
-      if ($('body').hasClass('has-disable')) {
-        enableScroll();
-        $('body').removeClass('has-disable');
-      }
-    }
-
-    if (win.width() <= 750) {
-      $('.menu-header__link').on('click', scrollTopFixMenu);
-    } else {
-      $('.menu-header__link').on('click', function (e) {
-        $page.stop().animate(
-          {
-            scrollTop: $($.attr(this, 'href')).offset().top,
-          },
-          400
-        );
-        e.preventDefault();
-      });
-    }
-
-    // Circle Progress Bar
-
-    // if (win.width() <= 463) {
-    //   $('.item-progress__round').circleProgress({ size: 70 });
-    // } else {
-    //   $('.item-progress__round').circleProgress({ size: 124 });
-    // }
   });
 
   // when menu FIXED
@@ -145,36 +108,104 @@ $(function () {
     contentRight.addClass('_active-tab');
   });
 
-  // Circle progress bar
+  // Resize event
 
-  // function Circlle(el) {
-  //   $(el)
-  //     .circleProgress({
-  //       fill: { color: '#1EB596' },
-  //       reverse: true,
-  //       startAngle: 29.86,
-  //     })
-  //     .on('circle-animation-progress', function (event, progress, stepValue) {
-  //       $(this)
-  //         .find('.item-progress__round-val')
-  //         .text(String(stepValue.toFixed(2)).substr(2));
-  //       $(this).find('.item-progress__round-percent').text('%');
-  //     });
-  // }
+  win.on('resize', function () {
 
-  // Circlle('.item-progress__round');
+    if (win.outerWidth() > 768) {
+      $('.menu-header__burger,.menu-header__body').removeClass('_active');
+      $('._overlay').removeClass('_overlay-show');
+    }
 
-  // let leftServicesButton = document.querySelectorAll(
-  //   '.left-services__buttons-item'
-  // );
+    if (win.outerWidth() > 768) {
+      if ($('body').hasClass('has-disable')) {
+        enableScroll();
+        $('body').removeClass('has-disable');
+      }
+    }
 
-  // for (let i = 0; i < leftServicesButton.length; i++) {
-  //   let item = leftServicesButton[i];
+    if (win.outerWidth() <= 768) {
+      $('.menu-header__link').on('click', scrollTopFixMenu);
+    } else {
+      $('.menu-header__link').on('click', function (e) {
+        $page.stop().animate(
+          {
+            scrollTop: $($.attr(this, 'href')).offset().top,
+          },
+          400
+        );
+        e.preventDefault();
+      });
+    }
+  });
 
-  //   item.addEventListener('click', function () {
-  //     Circlle('.item-progress__round');
-  //   });
-  // }
+  // Circle Progress Bar -----------------
+
+  let sizeBarFlag;
+
+  win.on('resize', function () {
+    if (win.outerWidth() <= 480 && sizeBarFlag == false) {
+      $('.item-progress__round').circleProgress({
+        size: 70,
+        emptyFill: '#00676A',
+        thickness: 3,
+        animation: false
+      });
+      sizeBarFlag = true;
+    }
+
+    if (win.outerWidth() > 480 && sizeBarFlag == true) {
+      $('.item-progress__round').circleProgress({
+        size: 124,
+        emptyFill: 'rgba(0, 0, 0, 0.1)',
+        thickness: 4,
+        animation: false
+      });
+      sizeBarFlag = false;
+    }
+  });
+
+  function Circlle(el) {
+    $(el)
+      .circleProgress({
+        fill: { color: '#1EB596' },
+        reverse: true,
+        startAngle: 29.86,
+        animation: { duration: 1400, easing: "circleProgressEasing" }
+      })
+      .on('circle-animation-progress', function (event, progress, stepValue) {
+        $(this)
+          .find('.item-progress__round-val')
+          .text(String(stepValue.toFixed(2)).substr(2));
+        $(this).find('.item-progress__round-percent').text('%');
+      });
+  }
+
+  // запуск при scrollTop position ПЕРЕДЕЛАТЬ
+  function runCircleProgress() {
+    Circlle('.item-progress__round');
+  }
+
+  runCircleProgress();
+
+  if (win.outerWidth() <= 480) {
+    $('.item-progress__round').circleProgress({ size: 70,
+      emptyFill: '#00676A',
+      thickness: 3,
+     });
+    sizeBarFlag = true;
+  }
+
+  if (win.outerWidth() > 480) {
+    sizeBarFlag = false;
+  }
+
+  // Event on Services buttons --------------------
+
+  $('.left-services__buttons-item').each(function(){
+    $(this).off('click', runCircleProgress);
+    $(this).on('click', runCircleProgress);
+  });
 
   // PAGE PROGRESS -----------------------
 
@@ -286,25 +317,25 @@ $(function () {
 
   // Team slider button
 
-  $('.slider-team__toggle-button').on('click', function () {
-    $('.slider-team__right-block').toggleClass('button-toggle');
+  $('.slide-inner__toggle-button').on('click', function () {
+    $('.slide-inner__right-block').toggleClass('button-toggle');
 
-    if ($('.slider-team__right-block').hasClass('button-toggle')) {
-      $('.slider-team__toggle-button').text('Hide info ▲');
-      let dn = $('#team').offset().top + 240;
-      $('html, body').animate(
+    if ($('.slide-inner__right-block').hasClass('button-toggle')) {
+      $('.slide-inner__toggle-button').text('Hide info ▲');
+      let position = $('#team').offset().top + 240;
+      $page.animate(
         {
-          scrollTop: dn,
+          scrollTop: position,
         },
         400
       );
     } else {
-      $('.slider-team__toggle-button').text('Show info ▼');
+      $('.slide-inner__toggle-button').text('Show info ▼');
 
-      let dn = $('#team').offset().top - 64;
-      $('html, body').animate(
+      let position = $('#team').offset().top - 64;
+      $page.animate(
         {
-          scrollTop: dn,
+          scrollTop: position,
         },
         400
       );

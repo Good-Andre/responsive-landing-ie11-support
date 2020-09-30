@@ -1,7 +1,7 @@
 .intro {
   position: relative;
   min-height: 100vh;
-  background: url('../images/header/intro-bg.jpg') 0 0 no-repeat;
+  background: url('../images/intro-bg.jpg') 0 0 no-repeat;
   background-color: #534e47;
   background-size: cover;
   transition: all 0.3s ease 0s;
@@ -19,14 +19,12 @@
     content: '';
     background-color: rgba(28, 27, 27, 0.4);
   }
-
-  &__body {
-    position: relative;
-    z-index: 1;
-  }
 }
 
 .body-intro {
+  position: relative;
+  z-index: 1;
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -51,39 +49,7 @@
     }
   }
 
-  &__button {
-    display: block;
-    width: 36px;
-    height: 36px;
-    margin: 0 auto 76px auto;
-    text-align: center;
-    cursor: pointer;
-    background-color: $crayola-green-jungle;
-    border-radius: 50%;
-    transition: background-color 0.2s ease 0s;
-    animation: move 0.7s infinite linear;
-
-    img {
-      margin-top: 2px;
-    }
-
-    @media (max-width: 768px) {
-      animation: none;
-    }
-
-    @media (max-width: $md+px) {
-      display: none;
-    }
-
-    &:hover {
-      background-color: $turquoise;
-      animation: none;
-    }
-  }
-}
-
-.content-intro {
-  &__title {
+  &__content-title {
     font-family: 'Source Sans Pro light', sans-serif;
     font-size: 35px;
     line-height: 70px;
@@ -114,7 +80,7 @@
     }
   }
 
-  &__text {
+  &__content-text {
     max-width: 603px;
     font-size: 16px;
     line-height: 28px;
@@ -134,6 +100,36 @@
 
     @media (max-width: $sm+px) {
       font-size: inherit;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 76px auto;
+    text-align: center;
+    cursor: pointer;
+    background-color: $crayola-green-jungle;
+    border-radius: 50%;
+    transition: background-color 0.2s ease 0s;
+    animation: move 0.7s infinite linear;
+
+    img {
+      margin-top: 2px;
+    }
+
+    @media (max-width: 768px) {
+      animation: none;
+    }
+
+    @media (max-width: $md+px) {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $turquoise;
+      animation: none;
     }
   }
 }

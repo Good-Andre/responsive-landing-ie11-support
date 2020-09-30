@@ -29,6 +29,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify-es": "^2.0.0",
     "jquery": "^3.5.1",
+    "jquery-circle-progress": "^1.2.2",
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {}

@@ -83,6 +83,7 @@ function vendors() {
     .src([
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/slick-carousel/slick/slick.min.js',
+      'node_modules/jquery-circle-progress/dist/circle-progress.min.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
