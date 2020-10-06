@@ -1,7 +1,7 @@
 .already {
   height: 201px;
   background-color: #0a0a0a;
-  background-image: url('../images/already/already-bg-3.jpg');
+  background-image: url('../images/already-bg-3.jpg');
   background-position: center;
 
   @media (max-width: $sm+px) {
@@ -16,7 +16,7 @@
   &__title {
     margin-top: 52px;
     margin-bottom: 29px;
-    font-size: 20px;
+    font-size: 1.43rem;
     line-height: 25px;
     color: #fff;
     letter-spacing: 0.4px;

@@ -14,9 +14,7 @@
     <p class="_noscript-info">Javascript is disabled in your web browser. The site will be incorrect, some functions will be unavailable.</p>
   </noscript>
 <div class="wrapper">
-<a class="_scroll-up" href="#intro">
-  <img src="images/icons/arrow.svg" alt="button scroll up">
-</a>
+<a class="_scroll-up" href="#intro"></a>
 <div class="progress">
   <div class="progress__wrapper">
     <div class="progress__container">
@@ -57,7 +55,6 @@
       <p class="body-intro__content-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
     </div>
     <a class="body-intro__button" href="#hello">
-      <img src="images/icons/arrow.svg" alt="down arrow icon">
     </a>
   </div>
 </section>
@@ -70,8 +67,8 @@
     </div>
     <div class="hello__image-block">
         <picture>
-          <source srcset="images/hello/tablet.webp" type="image/webp">
-          <img src="images/hello/tablet.png" alt="tablet">
+          <source srcset="images/webp/tablet.webp" type="image/webp">
+          <img src="images/webp/tablet.png" alt="tablet">
         </picture>
     </div>
   </div>
@@ -82,15 +79,9 @@
       <h2 class="about__top-title _title">DETAILS ABOUT BOUNCY</h2>
       <p class="about__top-text _text">At vero eos et sccusmus et iusto odio dignissimos ducimus qui blanditiis praesentum</p>
       <div class="about__icons-inner">
-        <div class="about__icon-item _icon-item _active-tab" data-tab="1">
-          <img src="images/icons/like.svg" alt="like icon">
-        </div>
-        <div class="about__icon-item _icon-item" data-tab="2">
-          <img src="images/icons/mouse.svg" alt="mouse icon">
-        </div>
-        <div class="about__icon-item _icon-item" data-tab="3">
-          <img src="images/icons/lamp.svg" alt="lamp icon">
-        </div>
+        <button class="about__icon-item _icon-item _active-tab" data-tab="1" aria-label="tab like"></button>
+        <button class="about__icon-item _icon-item" data-tab="2" aria-label="tab mouse"></button>
+        <button class="about__icon-item _icon-item" data-tab="3" aria-label="tab lamp"></button>
       </div>
     </div>
     <div class="bottom-about _active-tab" data-tab="1">
@@ -117,18 +108,16 @@
   </div>
 </section>
 <section class="projects">
-  <!-- <div class="projects__container _container"> -->
   <h2 class="projects__title _title">FEAUTERED PROJECTS</h2>
-  <p class="projects__text _text">At vero eos et accusamus et iustro odio dignissimos ducimus qui blanditiis
-    praesentium</p>
+  <p class="projects__text _text">At vero eos et accusamus et iustro odio dignissimos ducimus qui blanditiis praesentium</p>
   <div class="projects__bg">
 
-    <div class="projects__accordion accordion">
+    <div class="accordion">
       <ul>
         <li>
           <div>
             <a href="#">
-              <p>QUALITY</p>
+              <p class="accordion__item-title">QUALITY</p>
               <div class="accordion__cross"></div>
             </a>
           </div>
@@ -136,7 +125,7 @@
         <li>
           <div>
             <a href="#">
-              <p>VINTAGE</p>
+              <p class="accordion__item-title">VINTAGE</p>
               <div class="accordion__cross"></div>
             </a>
           </div>
@@ -144,7 +133,7 @@
         <li>
           <div>
             <a href="#">
-              <p>BRANDING</p>
+              <p class="accordion__item-title">BRANDING</p>
               <div class="accordion__cross"></div>
             </a>
           </div>
@@ -158,7 +147,6 @@
       blanditiis</p>
     <button class="projects__bottom-btn _btn">Submit Now</button>
   </div>
-  <!-- </div> -->
 </section>
 <section class="services" id="services">
   <div class="services__container _container">
@@ -169,21 +157,13 @@
       <div class="left-services">
 
         <div class="left-services__buttons">
-          <div class="left-services__buttons-item _icon-item _active-tab" data-tab="1">
-            <img src="images/icons/tools.svg" alt="tools icon">
-          </div>
+          <button class="left-services__buttons-item _icon-item _active-tab" data-tab="1" aria-label="tab tools"></button>
 
-          <div class="left-services__buttons-item _icon-item" data-tab="2">
-            <img src="images/icons/paint.svg" alt="paint icon">
-          </div>
+          <button class="left-services__buttons-item _icon-item" data-tab="2" aria-label="tab paint"></button>
 
-          <div class="left-services__buttons-item _icon-item" data-tab="3">
-            <img src="images/icons/joy.svg" alt="joy icon">
-          </div>
+          <button class="left-services__buttons-item _icon-item" data-tab="3" aria-label="tab joy"></button>
 
-          <div class="left-services__buttons-item _icon-item" data-tab="4">
-            <img src="images/icons/plug.svg" alt="plug icon">
-          </div>
+          <button class="left-services__buttons-item _icon-item" data-tab="4" aria-label="tab plug"></button>
         </div>
 
         <div class="left-services__description">
@@ -764,16 +744,16 @@
     <p class="team__text _text">At vero eos et accusamus et iustro odio dignissimos ducimus qui blanditiis praesentium</p>
     <div class="team__slider slider">
       <div class="slider-item">
-        <div class="slider-team">
-          <div class="slider-team__left-block">
-            <div class="slider-team__hover">
-              <a href="#" class="slider-team__hover-social">
+        <div class="slide-inner">
+          <div class="slide-inner__left-block">
+            <div class="slide-inner__hover">
+              <a href="#" class="slide-inner__hover-social">
                 <img src="images/icons/instagram.svg" alt="instagram">
               </a>
-              <a href="#" class="slider-team__hover-social">
+              <a href="#" class="slide-inner__hover-social">
                 <img src="images/icons/facebook.svg" alt="facebook">
               </a>
-              <a href="#" class="slider-team__hover-social">
+              <a href="#" class="slide-inner__hover-social">
                 <img src="images/icons/twitter.svg" alt="twitter">
               </a>
             </div>
@@ -782,10 +762,10 @@
                 <img src="images/webp/team-slide-1.jpg" alt="team member 1">
             </picture>
           </div>
-          <div class="slider-team__right-block">
-            <p class="slider-team__title">Abdullah Noman</p>
-            <p class="slider-team__rank">CREATIVE DIRECTOR, CODE CAFE</p>
-            <p class="slider-team__text">At vero eos et accusamus et iustro odio dignissimos <br> ducimus qui
+          <div class="slide-inner__right-block">
+            <p class="slide-inner__title">Abdullah Noman</p>
+            <p class="slide-inner__rank">CREATIVE DIRECTOR, CODE CAFE</p>
+            <p class="slide-inner__text">At vero eos et accusamus et iustro odio dignissimos <br> ducimus qui
               blanditiis praesentium</p>
             <div class="slider-item__linear-progress linear-progress">
               <h4 class="linear-progress__title">BRANDING</h4>
@@ -809,22 +789,22 @@
               </div>
             </div>
           </div>
-          <button class="slider-team__toggle-button _btn">
+          <button class="slide-inner__toggle-button _btn">
             Show info &#9660;
           </button>
         </div>
       </div>
       <div class="slider-item">
-        <div class="slider-team">
-          <div class="slider-team__left-block">
-            <div class="slider-team__hover">
-              <a href="#" class="slider-team__hover-social">
+        <div class="slide-inner">
+          <div class="slide-inner__left-block">
+            <div class="slide-inner__hover">
+              <a href="#" class="slide-inner__hover-social">
                 <img src="images/icons/instagram.svg" alt="instagram">
               </a>
-              <a href="#" class="slider-team__hover-social">
+              <a href="#" class="slide-inner__hover-social">
                 <img src="images/icons/facebook.svg" alt="facebook">
               </a>
-              <a href="#" class="slider-team__hover-social">
+              <a href="#" class="slide-inner__hover-social">
                 <img src="images/icons/twitter.svg" alt="twitter">
               </a>
             </div>
@@ -833,10 +813,10 @@
                 <img src="images/webp/team-slide-2.jpg" alt="team member 2">
             </picture>
           </div>
-          <div class="slider-team__right-block">
-            <p class="slider-team__title">Kosaburo Miyazaki</p>
-            <p class="slider-team__rank">LEAD PROGRAMMER, CODE CAFE</p>
-            <p class="slider-team__text">At vero eos et accusamus et iustro odio dignissimos <br> ducimus qui
+          <div class="slide-inner__right-block">
+            <p class="slide-inner__title">Kosaburo Miyazaki</p>
+            <p class="slide-inner__rank">LEAD PROGRAMMER, CODE CAFE</p>
+            <p class="slide-inner__text">At vero eos et accusamus et iustro odio dignissimos <br> ducimus qui
               blanditiis praesentium</p>
             <div class="slider-item__linear-progress linear-progress">
               <h4 class="linear-progress__title">BRANDING</h4>
@@ -860,22 +840,22 @@
               </div>
             </div>
           </div>
-          <button class="slider-team__toggle-button _btn">
+          <button class="slide-inner__toggle-button _btn">
             Show info &#9660;
           </button>
         </div>
       </div>
       <div class="slider-item">
-        <div class="slider-team">
-          <div class="slider-team__left-block">
-            <div class="slider-team__hover">
-              <a href="#" class="slider-team__hover-social">
+        <div class="slide-inner">
+          <div class="slide-inner__left-block">
+            <div class="slide-inner__hover">
+              <a href="#" class="slide-inner__hover-social">
                 <img src="images/icons/instagram.svg" alt="instagram">
               </a>
-              <a href="#" class="slider-team__hover-social">
+              <a href="#" class="slide-inner__hover-social">
                 <img src="images/icons/facebook.svg" alt="facebook">
               </a>
-              <a href="#" class="slider-team__hover-social">
+              <a href="#" class="slide-inner__hover-social">
                 <img src="images/icons/twitter.svg" alt="twitter">
               </a>
             </div>
@@ -884,10 +864,10 @@
                 <img src="images/webp/team-slide-3.jpg" alt="team member 3">
             </picture>
           </div>
-          <div class="slider-team__right-block">
-            <p class="slider-team__title">Jerry Smith</p>
-            <p class="slider-team__rank">WEB DESIGNER, CODE CAFE</p>
-            <p class="slider-team__text">At vero eos et accusamus et iustro odio dignissimos <br> ducimus qui
+          <div class="slide-inner__right-block">
+            <p class="slide-inner__title">Jerry Smith</p>
+            <p class="slide-inner__rank">WEB DESIGNER, CODE CAFE</p>
+            <p class="slide-inner__text">At vero eos et accusamus et iustro odio dignissimos <br> ducimus qui
               blanditiis praesentium</p>
             <div class="slider-item__linear-progress linear-progress">
               <h4 class="linear-progress__title">BRANDING</h4>
@@ -911,7 +891,7 @@
               </div>
             </div>
           </div>
-          <button class="slider-team__toggle-button _btn">
+          <button class="slide-inner__toggle-button _btn">
             Show info &#9660;
           </button>
         </div>
@@ -935,8 +915,8 @@
         <div class="slider-testimonials">
           <div class="slider-testimonials__left">
             <picture>
-              <source srcset="images/testimonials/testimonials-img-1.webp" type="image/webp">
-                <img src="images/testimonials/testimonials-img-1.png" alt="reviewer 1">
+              <source srcset="images/webp/testimonials-img-1.webp" type="image/webp">
+                <img src="images/webp/testimonials-img-1.png" alt="reviewer 1">
             </picture>
           </div>
           <div class="slider-testimonials__right">
@@ -950,8 +930,8 @@
         <div class="slider-testimonials">
           <div class="slider-testimonials__left">
             <picture>
-              <source srcset="images/testimonials/testimonials-img-2.webp" type="image/webp">
-                <img src="images/testimonials/testimonials-img-2.png" alt="reviewer 2">
+              <source srcset="images/webp/testimonials-img-2.webp" type="image/webp">
+                <img src="images/webp/testimonials-img-2.png" alt="reviewer 2">
             </picture>
           </div>
           <div class="slider-testimonials__right">
@@ -965,8 +945,8 @@
         <div class="slider-testimonials">
           <div class="slider-testimonials__left">
             <picture>
-              <source srcset="images/testimonials/testimonials-img-3.webp" type="image/webp">
-                <img src="images/testimonials/testimonials-img-3.png" alt="reviewer 3">
+              <source srcset="images/webp/testimonials-img-3.webp" type="image/webp">
+                <img src="images/webp/testimonials-img-3.png" alt="reviewer 3">
             </picture>
           </div>
           <div class="slider-testimonials__right">
@@ -1083,7 +1063,7 @@
     <p class="subscribe__text _text">At vero eos et accusamus et iustro odio dignissimos ducimus qui blanditiis praesentium</p>
     <form class="subscribe__form" action="#" id="form-subscribe">
       <div class="subscribe__email-inner">
-        <input class="subscribe__email" type="text" name="myemail" 
+        <input class="subscribe__email" type="email" name="myemail" 
         id="subscribe-email" required form="form-subscribe" placeholder="Email Address">
       </div>
       <input class="subscribe__submit" type="submit" value="SUBMIT" id="subscribe-submit" form="form-subscribe">
@@ -1097,11 +1077,11 @@
     <div class="contact__inner-item item-inner">
       <div class="item-inner__image-block">
         <picture>
-          <source srcset="images/contact/contact-1.webp" type="image/webp">
-            <img class="item-inner__image-bg" src="images/contact/contact-1.jpg" alt="address image">
+          <source srcset="images/webp/contact-1.webp" type="image/webp">
+            <img class="item-inner__image-bg" src="images/webp/contact-1.jpg" alt="address image">
         </picture>
         <a href="#">
-          <img class="item-inner__image-icon" src="images/contact/mail.svg" alt="mail icon">
+          <img class="item-inner__image-icon" src="images/icons/mail.svg" alt="mail icon">
         </a>
       </div>
       <h3 class="item-inner__title">EMAIL</h3>
@@ -1111,11 +1091,11 @@
     <div class="contact__inner-item item-inner">
       <div class="item-inner__image-block">
         <picture>
-          <source srcset="images/contact/contact-2.webp" type="image/webp">
-            <img class="item-inner__image-bg" src="images/contact/contact-2.jpg" alt="address image">
+          <source srcset="images/webp/contact-2.webp" type="image/webp">
+            <img class="item-inner__image-bg" src="images/webp/contact-2.jpg" alt="address image">
         </picture>
         <a href="#">
-          <img class="item-inner__image-icon" src="images/contact/map-marker.svg" alt="map-marker icon">
+          <img class="item-inner__image-icon" src="images/icons/map-marker.svg" alt="map-marker icon">
         </a>
       </div>
       <h3 class="item-inner__title">OUR OFFICE</h3>
@@ -1124,11 +1104,11 @@
     <div class="contact__inner-item item-inner">
       <div class="item-inner__image-block">
         <picture>
-          <source srcset="images/contact/contact-3.webp" type="image/webp">
-            <img class="item-inner__image-bg" src="images/contact/contact-3.jpg" alt="address image">
+          <source srcset="images/webp/contact-3.webp" type="image/webp">
+            <img class="item-inner__image-bg" src="images/webp/contact-3.jpg" alt="address image">
         </picture>
         <a href="#">
-          <img class="item-inner__image-icon" src="images/contact/call.svg" alt="call icon">
+          <img class="item-inner__image-icon" src="images/icons/call.svg" alt="call icon">
         </a>
       </div>
       <h3 class="item-inner__title">PHONE</h3>
@@ -1155,13 +1135,12 @@
   </div>
 </div>
 <div class="map" id="section-map">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14048.126761586906!2d-0.12502286830422404!3d51.506217984959704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1599217222110!5m2!1sru!2sru" style="width: 100%;height:100%;border:0;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14048.126761586906!2d-0.12502286830422404!3d51.506217984959704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1599217222110!5m2!1sru!2sru" style="width: 100%; height: 100%; border: 0;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
+
   <div class="map__overlay overlay-map">
     <div class="overlay-map__inner">
-      <button class="overlay-map__button overlay-map__button-1">FIND US ON THE MAP</button>
-      <button class="overlay-map__button overlay-map__button-2">
-        <img src="images/icons/arrow.svg" alt="down arrow icon">
-      </button>
+      <button class="overlay-map__button overlay-map__button--1">FIND US ON THE MAP</button>
+      <button class="overlay-map__button overlay-map__button--2"></button>
     </div>
   </div>
 </div>

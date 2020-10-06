@@ -2,13 +2,13 @@
   position: relative;
   min-height: 392px;
   background-color: #1f1f21;
-  background-image: url('../images/impressed/impressed-bg-1.1.jpg');
+  background-image: url('../images/impressed-bg-1.1.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @media (max-width: 1110px) {
-    background-image: url('../images/impressed/impressed-bg-2.2.jpg');
+    background-image: url('../images/impressed-bg-2.2.jpg');
   }
 
   @media (max-width: 1110px) {
@@ -91,12 +91,12 @@
 
   &__text {
     margin-bottom: 18px;
-    font-size: 16px;
+    font-size: 1.14rem;
     line-height: 28px;
   }
 
   &__author {
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: bold;
     line-height: 25px;
     text-transform: uppercase;
@@ -105,6 +105,7 @@
 
   &__author-position {
     line-height: 25px;
+    text-transform: uppercase;
     letter-spacing: 0.6px;
 
     span {
@@ -130,6 +131,7 @@
   &__right-text {
     position: absolute;
     color: #cdcdcd;
+    text-transform: uppercase;
     cursor: default;
     transition: all 0.3s ease 0s;
 
@@ -143,7 +145,7 @@
       width: 136px;
       height: 20px;
       font-family: 'Big John', sans-serif;
-      font-size: 30px;
+      font-size: 2.14rem;
     }
 
     &--h1 {
@@ -162,7 +164,7 @@
   &__right-h {
     top: 90px;
     font-family: 'Bebas Neue Regular', sans-serif;
-    font-size: 26px;
+    font-size: 1.86rem;
     font-weight: 600;
     font-stretch: condensed;
     color: #fff;
@@ -174,7 +176,7 @@
     top: -38px;
     width: 409px;
     height: 328px;
-    background-image: url('../images/impressed/tv-0.png');
+    background-image: url('../images/tv-0.png');
 
     &:hover .impressed__right-h {
       opacity: 10;

@@ -1,6 +1,6 @@
 .blog {
   background-color: #181818;
-  background-image: url('../images/blog/blog-bg-0.jpg');
+  background-image: url('../images/blog-bg-0.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -68,7 +68,7 @@
 .item-slider {
   &__title {
     margin-bottom: 13px;
-    font-size: 20px;
+    font-size: 1.43rem;
     line-height: 20px;
     color: $very-pale;
     letter-spacing: 0.4px;
@@ -78,6 +78,7 @@
     margin-bottom: 17px;
     font: italic 'Source Sans Pro light', sans-serif;
     color: $crayola-green-jungle;
+    text-transform: uppercase;
 
     @media (max-width: $sm+px) {
       margin-bottom: 13px;
@@ -110,11 +111,22 @@
   &__link {
     display: inline-block;
     width: 100px;
-    font-size: 16px;
+    font-size: 1.14rem;
     color: $gray-window;
 
-    &:hover {
-      color: $very-pale;
+    @media (max-width: $md+px) {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @media (min-width: $md+px) {
+      &:hover {
+        color: $very-pale;
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -124,6 +136,7 @@
   top: 50px;
   right: -10px;
   display: block;
+  transition: all 0.3s ease 0s;
 
   li {
     margin-bottom: 10px;

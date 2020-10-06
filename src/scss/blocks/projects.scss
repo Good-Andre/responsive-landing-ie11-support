@@ -1,8 +1,4 @@
 .projects {
-  // &__container {
-  //   max-width: 1366px;
-  // }
-
   &__title {
     @media (max-width: $md+px) {
       margin-top: 50px;
@@ -33,24 +29,24 @@
     justify-content: center;
     padding: 38px 0;
     background-color: #1ba486;
-    background-image: url('../images/projects/featured-bg.jpg');
+    background-image: url('../images/featured-bg.jpg');
     background-position: center;
     background-size: cover;
     transition: all 0.3s ease 0s;
-
-    // @media (max-width: $md+px) {
-    //   margin-top: 20px;
-    // }
 
     @media (max-width: 990px) {
       flex-direction: column;
       padding: 30px 0 36px 0;
     }
+
+    @media (max-width: $sm+px) {
+      padding: 24px 0 31px 0;
+    }
   }
 
   &__bottom-text {
     margin-right: 7%;
-    font-size: 20px;
+    font-size: 1.43rem;
     line-height: 28px;
     color: #fff;
 
@@ -70,9 +66,11 @@
     color: #fff;
     border: 1px solid #fff;
 
-    &:hover {
-      color: $crayola-green-jungle;
-      background-color: #fff;
+    @media (min-width: $md+px) {
+      &:hover {
+        color: $crayola-green-jungle;
+        background-color: #fff;
+      }
     }
   }
 }
@@ -106,7 +104,7 @@
     transition: width 400ms ease;
   }
 
-  ul li div {
+  ul li > div {
     position: relative;
   }
 
@@ -127,20 +125,26 @@
       align-items: flex-end;
       height: 250px;
     }
+
+    @media (max-width: $sm+px) {
+      align-items: flex-end;
+      height: 200px;
+    }
   }
 
-  p {
+  &__item-title {
     font-family: 'Source Sans Pro light', sans-serif;
-    font-size: 20px;
+    font-size: 1.43rem;
     line-height: 20px;
     color: #fff;
+    text-transform: uppercase;
     letter-spacing: 2px;
     opacity: 1;
     transition: all 0.2s ease 0s;
 
     @media (max-width: $md+px) {
       width: 100%;
-      padding: 5px 10px;
+      padding: 13px 10px;
       margin-bottom: 0;
       color: $very-pale;
       text-align: center;
@@ -149,7 +153,7 @@
   }
 
   &__cross {
-    @media screen and (min-width: $md+px) {
+    @media (min-width: $md+px) {
       position: relative;
       display: none;
 
@@ -175,10 +179,10 @@
       }
     }
   }
-}
 
-.accordion ul:hover li:hover .accordion__cross {
-  display: block;
+  & li:hover .accordion__cross {
+    display: block;
+  }
 }
 
 // NEED OPTIMIZED IMAGES
@@ -188,42 +192,44 @@
   @media (max-width: $md+px) {
     height: 250px;
   }
-}
 
-.accordion ul li:nth-child(1) {
-  background-image: url('../images/projects/accord-0.jpg');
-  background-size: cover;
-}
-
-.accordion ul li:nth-child(2) {
-  background-image: url('../images/projects/accord-2.jpg');
-  background-size: cover;
-}
-
-.accordion ul li:nth-child(3) {
-  background-image: url('../images/projects/accord-1.jpg');
-  background-size: cover;
-}
-
-@media screen and (min-width: $md+px) {
-  .accordion ul li:hover {
-    // @media (max-width: 1366px) {
-    width: 200%;
-    // }
+  @media (max-width: $sm+px) {
+    height: 200px;
   }
 }
 
-.accordion ul:hover li:hover > div a p {
-  @media screen and (min-width: $md+px) {
+.accordion li:nth-child(1) {
+  background-image: url('../images/accord-0.jpg');
+  background-size: cover;
+}
+
+.accordion li:nth-child(2) {
+  background-image: url('../images/accord-2.jpg');
+  background-size: cover;
+}
+
+.accordion li:nth-child(3) {
+  background-image: url('../images/accord-1.jpg');
+  background-size: cover;
+}
+
+@media (min-width: $md+px) {
+  .accordion li:hover {
+    width: 200%;
+  }
+}
+
+.accordion li:hover > div a p {
+  @media (min-width: $md+px) {
     display: none;
   }
 }
 
-.accordion ul:hover li:hover a {
+.accordion li:hover a {
   background: rgba(0, 0, 0, 0);
 }
 
-@media screen and (max-width: $md+px) {
+@media (max-width: $md+px) {
   body {
     margin: 0;
   }
@@ -232,7 +238,7 @@
     height: auto;
   }
 
-  .accordion ul li {
+  .accordion li {
     width: 100%;
   }
 }

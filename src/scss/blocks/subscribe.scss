@@ -2,7 +2,7 @@
   max-height: 378px;
   color: #fff;
   background-color: #0b0b0b;
-  background-image: url('../images/subscribe/subscribe-bg.jpg');
+  background-image: url('../images/subscribe-bg.jpg');
   background-position: center;
 
   &__title {
@@ -55,7 +55,7 @@
     width: 358px;
     height: 41px;
     padding-left: 22px;
-    font-size: 14px;
+    font-size: 1rem;
     color: $very-pale;
     background-color: transparent;
     border: 1px solid $crayola-green-jungle;
@@ -82,11 +82,14 @@
     min-width: 151px;
     line-height: 41px;
     color: #fff;
+    text-transform: uppercase;
     cursor: pointer;
     background-color: $crayola-green-jungle;
 
-    &:hover {
-      background-color: $turquoise;
+    @media (min-width: $md+px) {
+      &:hover {
+        background-color: $turquoise;
+      }
     }
 
     @media (max-width: 580px) {

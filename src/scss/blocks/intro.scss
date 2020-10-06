@@ -111,13 +111,11 @@
     text-align: center;
     cursor: pointer;
     background-color: $crayola-green-jungle;
+    background-image: url('../images/icons/arrow.svg');
+    background-position: center;
     border-radius: 50%;
     transition: background-color 0.2s ease 0s;
     animation: move 0.7s infinite linear;
-
-    img {
-      margin-top: 2px;
-    }
 
     @media (max-width: 768px) {
       animation: none;

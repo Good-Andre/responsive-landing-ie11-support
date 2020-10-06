@@ -65,32 +65,27 @@
   }
 
   &__buttons-item {
+    display: block;
     margin-bottom: 17px;
 
-    &:last-child {
-      @media (max-width: 998px) {
-        margin-bottom: 0;
-      }
-    }
-
     &:first-child {
-      padding: 11px;
+      background-image: url('../images/icons/tools.svg');
     }
 
     &:nth-child(2) {
-      padding: 12px 11px;
+      background-image: url('../images/icons/paint.svg');
     }
 
     &:nth-child(3) {
-      padding: 8px 12px;
+      background-image: url('../images/icons/joy.svg');
     }
 
-    &:nth-child(4) {
-      padding: 11px 16px;
-    }
+    &:last-child {
+      background-image: url('../images/icons/plug.svg');
 
-    img {
-      display: block;
+      @media (max-width: 998px) {
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -115,7 +110,7 @@
     margin-bottom: 27px;
 
     @media (max-width: $sm+px) {
-      font-size: 14px;
+      font-size: 1rem;
       line-height: 25px;
     }
   }
@@ -145,7 +140,9 @@
 
   &__item-title {
     margin-top: 20px;
-    font: 16px/16px 'Roboto Light', sans-serif;
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 1.14rem;
+    line-height: 16px;
     color: $gray-squirrel;
     text-align: center;
     letter-spacing: 0.5px;
@@ -181,7 +178,9 @@
     position: absolute;
     top: 48px;
     left: 42px;
-    font: 25px/25px 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.78rem;
+    line-height: 25px;
     color: $gray-squirrel;
     letter-spacing: 0.5px;
 
@@ -195,7 +194,7 @@
     position: absolute;
     top: 58px;
     left: 73px;
-    font-size: 14px;
+    font-size: 1rem;
     color: $gray-squirrel;
 
     @media screen and (max-width: 480px) {
@@ -212,7 +211,9 @@
   &__title {
     margin-top: 20px;
     margin-right: 5px;
-    font: 16px/16px 'Roboto Light', sans-serif;
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 1.14rem;
+    line-height: 16px;
     color: $gray-squirrel;
     text-align: center;
     letter-spacing: 0.5px;

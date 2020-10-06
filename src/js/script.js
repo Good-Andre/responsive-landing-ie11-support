@@ -26,11 +26,11 @@ $(function () {
     let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
     document.body.style.paddingRight = paddingOffset;
     header.style.paddingRight = paddingOffset;
-    let pagePosition = $(window).scrollTop();
+    let pagePosition = win.scrollTop();
     document.body.classList.add('_disable-scroll');
     document.body.dataset.position = pagePosition;
     document.body.style.top = -pagePosition + 'px';
-    header.style.top = $(window).scrollTop();
+    header.style.top = win.scrollTop();
     document.body.classList.add('has-disable');
   }
 
@@ -57,16 +57,16 @@ $(function () {
   // Smooth scrolling (for ie-11 support)
 
   $('a[href*="#"]').on('click', function () {
-    $page.animate(
-      {
-        scrollTop: $($.attr(this, 'href')).offset().top,
-      },
-      400
-    );
-    return false;
+      $page.animate(
+        {
+          scrollTop: $($.attr(this, 'href')).offset().top,
+        },
+        400
+      );
+      return false;
   });
 
-  // when menu FIXED
+  // when menu FIXED --------------
 
   function scrollTopFixMenu(e) {
     $page.stop().animate(
@@ -78,13 +78,32 @@ $(function () {
     e.preventDefault();
   }
 
+  function scrollTopDefault(e) {
+    $page.stop().animate(
+      {
+        scrollTop: $($.attr(this, 'href')).offset().top,
+      },
+      400
+    );
+    e.preventDefault();
+  }
+
+  win.on('load', function () {
+    if (win.outerWidth() <= 768) {
+      $('.menu-header__link').on('click', scrollTopFixMenu);
+    } else {
+      $('.menu-header__link').on('click', scrollTopDefault);
+    }
+  });
+
+ // click Menu links event
+
   $('.menu-header__link').on('click', function () {
     deleteActiveClass();
     enableScroll();
   });
 
   // section "ABOUT" tabs
-
   $('.about__icon-item').on('click', function () {
     let id = $(this).attr('data-tab'),
       content = $('.bottom-about[data-tab="' + id + '"]');
@@ -108,7 +127,7 @@ $(function () {
     contentRight.addClass('_active-tab');
   });
 
-  // Resize event
+  // Resize events
 
   win.on('resize', function () {
 
@@ -127,15 +146,7 @@ $(function () {
     if (win.outerWidth() <= 768) {
       $('.menu-header__link').on('click', scrollTopFixMenu);
     } else {
-      $('.menu-header__link').on('click', function (e) {
-        $page.stop().animate(
-          {
-            scrollTop: $($.attr(this, 'href')).offset().top,
-          },
-          400
-        );
-        e.preventDefault();
-      });
+      $('.menu-header__link').on('click', scrollTopDefault);
     }
   });
 
@@ -171,6 +182,7 @@ $(function () {
         fill: { color: '#1EB596' },
         reverse: true,
         startAngle: 29.86,
+        // animation: true
         animation: { duration: 1400, easing: "circleProgressEasing" }
       })
       .on('circle-animation-progress', function (event, progress, stepValue) {

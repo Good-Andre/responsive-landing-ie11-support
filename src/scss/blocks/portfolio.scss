@@ -42,7 +42,7 @@
 
   &__filter-item {
     position: relative;
-    font-size: 16px;
+    font-size: 1.14rem;
     line-height: 16px;
     color: $granite-gray;
     cursor: pointer;
@@ -86,6 +86,7 @@
     background-image: url('../images/webp/port-bg.jpg');
     background-position: center;
     background-size: cover;
+    // margin-top: -200px;
 
     @media (max-width: $xl+px) {
       margin-bottom: 0;
@@ -106,7 +107,7 @@
   &__bottom-text {
     padding: 0 15px;
     margin-bottom: 27px;
-    font-size: 20px;
+    font-size: 1.43rem;
     line-height: 25px;
     color: #fff;
     letter-spacing: 0.5px;
@@ -130,13 +131,19 @@
     }
   }
 
+  // &__test-wrapeer {
+  //   margin-top: -30px;
+  // }
+
   &__works {
     position: relative;
-    column-gap: 0;
+    column-gap: 10px;
     max-width: 1130px;
     padding: 5px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 40px auto;
     column-count: 1;
+    // height: 100%;
+    // overflow: hidden;
 
     @media (max-width: $sm+px) {
       margin-bottom: 20px;
@@ -160,8 +167,13 @@
   }
 
   &__works-item {
-    padding: 0 5px 5px 5px;
-    margin: 0 0 5px 0;
+    display: block;
+    width: 100%;
+    padding-bottom: 10px;
+    break-inside: avoid-column;
+    // margin-bottom: 1px;
+    // margin-bottom: -1px;
+    // margin-bottom: 0;
   }
 
   &__work-inner {
@@ -229,8 +241,11 @@ img.portfolio__works-image {
   &__title {
     position: relative;
     margin-top: 10%;
-    font: 20px/20px 'Source Sans Pro light', sans-serif;
+    font-family: 'Source Sans Pro light', sans-serif;
+    font-size: 1.43rem;
+    line-height: 20px;
     color: $gray-window;
+    text-transform: uppercase;
     letter-spacing: 3px;
 
     @media (max-width: 1115px) {
@@ -246,7 +261,7 @@ img.portfolio__works-image {
     }
 
     @media (max-width: 380px) {
-      font-size: 16px;
+      font-size: 1.14rem;
     }
 
     &::after {
@@ -266,24 +281,24 @@ img.portfolio__works-image {
 
   &__text {
     margin-bottom: 12px;
-    font-size: 12px;
+    font-size: 0.86rem;
     line-height: 20px;
     color: $gray-window;
     letter-spacing: 0.3px;
 
-    @media (max-width: 902px) {
-      font-size: 12px;
+    @media (max-width: 948px) {
+      font-size: 0.71rem;
     }
 
-    @media (max-width: 948px) {
-      font-size: 10px;
+    @media (max-width: 902px) {
+      font-size: 0.86rem;
     }
 
     @media (max-width: 852px) {
-      font-size: 12px;
+      font-size: 0.86rem;
     }
 
-    @media (max-width: 446px) {
+    @media (max-width: $sm+px) {
       display: none;
     }
 
@@ -330,7 +345,7 @@ img.portfolio__works-image {
       background-color: #00846c;
     }
 
-    @media (max-width: 446px) {
+    @media (max-width: $sm+px) {
       margin-bottom: 5px;
     }
 

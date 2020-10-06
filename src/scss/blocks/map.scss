@@ -1,7 +1,7 @@
 .map {
   position: relative;
   height: 496px;
-  background-image: url('../images/map/map-bg.jpg');
+  background-image: url('../images/map-bg.jpg');
   background-position: center;
 
   @media (max-width: $sm+px) {
@@ -28,26 +28,15 @@
   }
 
   &__button {
-    &-1 {
-      margin-right: 13px;
-      font-size: 16px;
-      line-height: 25px;
-      color: #fff;
-      cursor: pointer;
-      background-color: transparent;
-
-      &:hover ~ .overlay-map__button--2 {
-        background-color: $turquoise;
-        animation: none;
-      }
-    }
-
-    &-2 {
+    &--2 {
       position: absolute;
       top: 4px;
       width: 18px;
       height: 18px;
       background-color: $crayola-green-jungle;
+      background-image: url('../images/icons/arrow.svg');
+      background-position: center;
+      background-size: cover;
       border-radius: 50%;
       transition: background-color 0.2s ease 0s;
       animation: move 0.7s infinite linear;
@@ -56,12 +45,24 @@
         background-color: $turquoise;
         animation: none;
       }
+    }
 
-      img {
-        z-index: 1;
-        display: block;
-        width: 18px;
-        height: 18px;
+    &--1 {
+      margin-right: 13px;
+      font-size: 1.14rem;
+      line-height: 25px;
+      color: #fff;
+      text-transform: uppercase;
+      cursor: pointer;
+      background-color: transparent;
+
+      &:hover {
+        color: $very-pale;
+      }
+
+      &:hover ~ .overlay-map__button--2 {
+        background-color: $turquoise;
+        animation: none;
       }
     }
   }
