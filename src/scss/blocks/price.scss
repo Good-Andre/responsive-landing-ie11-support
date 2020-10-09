@@ -1,5 +1,5 @@
 .price {
-  min-height: 638px;
+  // min-height: 638px;
   background-color: $smoky-white;
 
   &__container {
@@ -33,6 +33,7 @@
   &__cards {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 104px;
 
     @media (max-width: $md+px) {
       flex-direction: column;
@@ -70,6 +71,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  min-height: 302px;
   overflow: hidden;
   backface-visibility: hidden;
   background-color: #fff;
@@ -80,6 +82,7 @@
     position: static;
     width: 100%;
     height: auto;
+    min-height: 100%;
     overflow: visible;
     box-shadow: none;
     transition: none;
@@ -177,6 +180,7 @@
     flex: 0 0 auto;
     height: 67px;
     padding: 0 70px;
+    margin-top: 24px;
     font-size: 1.14rem;
     line-height: 67px;
     color: #fff;
@@ -209,12 +213,11 @@
     }
 
     &::before {
-      // position: absolute;
-      // top: 1px;
-      // right: 70px;
-      float: right;
-      padding-top: 1px;
-      content: url(../images/icons/back-item-bottom-link-arrow.svg);
+      position: absolute;
+      top: 1px;
+      right: 70px;
+      // content: url(../images/icons/back-item-bottom-link-arrow.svg);
+      content: '>';
 
       @media (max-width: $md+px) {
         display: none;

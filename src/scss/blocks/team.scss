@@ -15,7 +15,7 @@
   &__text {
     margin: 0 auto 58px auto;
 
-    @media (max-width: 720px) {
+    @media (max-width: $md+px) {
       margin-bottom: 4px;
     }
   }
@@ -25,11 +25,11 @@
     padding: 0 15px;
     margin: 0 auto 165px auto;
 
-    @media (max-width: 1180px) {
+    @media (max-width: $xl+px) {
       margin-bottom: 124px;
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: $md+px) {
       margin-bottom: 62px;
     }
 
@@ -45,7 +45,7 @@
   justify-content: space-between;
   text-align: right;
 
-  @media (max-width: 720px) {
+  @media (max-width: $md+px) {
     flex-direction: column;
     padding-bottom: 1px;
     text-align: center;
@@ -66,21 +66,21 @@
     //   }
     // }
 
-    @media (max-width: 720px) {
+    @media (max-width: $md+px) {
       width: 285px;
       margin: 0 auto;
     }
 
-    @media (max-width: 355px) {
-      width: 100%;
-    }
+    // @media (max-width: $sm+px) {
+    //   width: 100%;
+    // }
 
-    > img {
-      @media (max-width: 355px) {
-        width: 100%;
-        height: auto;
-      }
-    }
+    // > img {
+    //   @media (max-width: $sm+px) {
+    //     width: 100%;
+    //     height: auto;
+    //   }
+    // }
   }
 
   &__hover {
@@ -98,7 +98,7 @@
     opacity: 0;
     transition: all 0.2s ease 0s;
 
-    @media (max-width: 720px) {
+    @media (max-width: $md+px) {
       position: static;
       margin: 0 auto;
       margin-bottom: 10px;
@@ -125,8 +125,10 @@
       margin-right: 0;
     }
 
-    &:hover {
-      transform: scale(1.3);
+    @media (min-width: $md+px) {
+      &:hover {
+        transform: scale(1.3);
+      }
     }
   }
 
@@ -134,7 +136,7 @@
     width: 366px;
     margin-right: 46px;
 
-    @media (max-width: 720px) {
+    @media (max-width: $md+px) {
       z-index: -100;
       height: 0;
       margin: 0 auto 0 auto;
@@ -143,9 +145,9 @@
       transform: translateY(-165px);
     }
 
-    @media (max-width: 420px) {
+    @media (max-width: $sm+px) {
       width: 100%;
-      max-width: 366px;
+      max-width: 298px;
     }
 
     &::after {
@@ -167,7 +169,7 @@
   &__toggle-button {
     display: none;
 
-    @media (max-width: 720px) {
+    @media (max-width: $md+px) {
       display: block;
       width: 190px;
       margin: 20px auto 0 auto;
@@ -179,7 +181,7 @@
     font-size: 1.43rem;
     color: $granite-gray;
 
-    @media (max-width: 720px) {
+    @media (max-width: $md+px) {
       margin-top: 20px;
     }
 
@@ -211,7 +213,7 @@
   margin-top: 35px;
   margin-left: 35px;
 
-  @media (max-width: 720px) {
+  @media (max-width: $md+px) {
     margin: 35px auto 10px 0;
   }
 
@@ -235,17 +237,17 @@
     width: 330px;
     background-color: $periwinkle-crayola;
 
-    @media (max-width: 420px) {
-      max-width: 330px;
-    }
-
-    @media (max-width: 380px) {
-      max-width: 280px;
-    }
-
-    @media (max-width: 335px) {
+    @media (max-width: $sm+px) {
       max-width: 260px;
     }
+
+    // @media (max-width: 380px) {
+    //   max-width: 280px;
+    // }
+
+    // @media (max-width: 335px) {
+    //   max-width: 260px;
+    // }
   }
 
   &__bar-line {
@@ -312,7 +314,7 @@
 .team-dots {
   margin-top: 65px;
 
-  @media (max-width: 720px) {
+  @media (max-width: $md+px) {
     margin-top: 30px;
   }
 
@@ -334,7 +336,7 @@
 }
 
 .button-toggle {
-  @media (max-width: 720px) {
+  @media (max-width: $md+px) {
     z-index: 1;
     height: 100%;
     opacity: 1;

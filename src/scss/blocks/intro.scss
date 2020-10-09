@@ -1,7 +1,7 @@
 .intro {
   position: relative;
   min-height: 100vh;
-  background: url('../images/intro-bg.jpg') 0 0 no-repeat;
+  background: url('../images/intro-bg.jpg') center no-repeat;
   background-color: #534e47;
   background-size: cover;
   transition: all 0.3s ease 0s;
@@ -117,7 +117,7 @@
     transition: background-color 0.2s ease 0s;
     animation: move 0.7s infinite linear;
 
-    @media (max-width: 768px) {
+    @media (max-width: $md+px) {
       animation: none;
     }
 

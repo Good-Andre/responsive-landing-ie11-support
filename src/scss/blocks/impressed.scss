@@ -7,11 +7,11 @@
   background-position: center;
   background-size: cover;
 
-  @media (max-width: 1110px) {
+  @media (max-width: $xl+px) {
     background-image: url('../images/impressed-bg-2.2.jpg');
   }
 
-  @media (max-width: 1110px) {
+  @media (max-width: $xl+px) {
     background-position: top;
   }
 
@@ -37,7 +37,7 @@
     padding: 0 25px;
     transition: all 0.3s ease 0s;
 
-    @media (max-width: 1110px) {
+    @media (max-width: $xl+px) {
       flex-direction: column;
     }
   }
@@ -49,7 +49,7 @@
     color: $gray-window;
     transition: all 0.3s ease 0s;
 
-    @media (max-width: 1110px) {
+    @media (max-width: $xl+px) {
       width: 100%;
       margin: 64px auto 40px auto;
       text-align: center;
@@ -57,10 +57,6 @@
 
     @media (max-width: $md+px) {
       margin-top: 0;
-    }
-
-    @media (max-width: 470px) {
-      margin-bottom: 36px;
     }
 
     @media (max-width: $sm+px) {
@@ -74,7 +70,7 @@
     color: #fff;
     text-align: left;
 
-    @media (max-width: 1110px) {
+    @media (max-width: $xl+px) {
       text-align: center;
     }
 
@@ -119,7 +115,7 @@
     width: 409px;
     height: 328px;
 
-    @media (max-width: 1110px) {
+    @media (max-width: $xl+px) {
       margin: 0 auto 50px auto;
     }
 
@@ -186,7 +182,7 @@
       opacity: 0;
     }
 
-    @media (max-width: 1110px) {
+    @media (max-width: $xl+px) {
       top: 0;
     }
   }

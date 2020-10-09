@@ -1,5 +1,6 @@
 .subscribe {
   max-height: 378px;
+  padding: 0 20px;
   color: #fff;
   background-color: #0b0b0b;
   background-image: url('../images/subscribe-bg.jpg');
@@ -34,16 +35,16 @@
       margin-bottom: 48px;
     }
 
-    @media (max-width: 580px) {
+    @media (max-width: $md+px) {
       flex-direction: column;
-      margin: 0 20px;
+      // margin: 0 20px;
     }
   }
 
   &__email-inner {
     position: relative;
 
-    @media (max-width: 580px) {
+    @media (max-width: $md+px) {
       display: block;
       width: 100%;
       max-width: 580px;
@@ -69,13 +70,13 @@
       outline: 1px solid $gray-window;
     }
 
-    @media (max-width: 580px) {
+    @media (max-width: $md+px) {
       width: 100%;
     }
 
-    @media (max-width: 412px) {
-      width: 100%;
-    }
+    // @media (max-width: 412px) {
+    //   width: 100%;
+    // }
   }
 
   &__submit {
@@ -92,7 +93,7 @@
       }
     }
 
-    @media (max-width: 580px) {
+    @media (max-width: $md+px) {
       display: block;
       width: 100%;
       max-width: 556px;

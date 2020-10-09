@@ -69,9 +69,11 @@
       margin: 0 auto;
     }
 
-    &:hover {
-      color: #fff;
-      background-color: $granite-gray;
+    @media (min-width: $md+px) {
+      &:hover {
+        color: #fff;
+        background-color: $granite-gray;
+      }
     }
 
     @media (max-width: $sm+px) {

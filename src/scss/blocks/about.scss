@@ -12,8 +12,6 @@
   }
 
   &__top-title {
-    // margin-bottom: 38px;
-
     @media (max-width: $md+px) {
       margin-top: 50px;
       margin-bottom: 22px;
@@ -26,9 +24,6 @@
   }
 
   &__top-text {
-    // margin-bottom: 55px;
-    // letter-spacing: 0.5px;
-
     @media (max-width: $md+px) {
       margin-bottom: 25px;
     }
@@ -81,10 +76,6 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 53px;
-
-    @media (max-width: 1110px) {
-      margin-bottom: 27px;
-    }
 
     @media (max-width: $md+px) {
       flex-direction: column;

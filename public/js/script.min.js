@@ -182,7 +182,6 @@ $(function () {
         fill: { color: '#1EB596' },
         reverse: true,
         startAngle: 29.86,
-        // animation: true
         animation: { duration: 1400, easing: "circleProgressEasing" }
       })
       .on('circle-animation-progress', function (event, progress, stepValue) {
