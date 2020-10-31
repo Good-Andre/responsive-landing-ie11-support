@@ -15,7 +15,7 @@
 
     @media (max-width: $sm+px) {
       margin-top: 35px;
-      line-height: 28px;
+      line-height: 2rem;
     }
   }
 
@@ -111,7 +111,7 @@
 
     @media (max-width: $sm+px) {
       font-size: 1rem;
-      line-height: 25px;
+      line-height: 1.78rem;
     }
   }
 }
@@ -142,7 +142,7 @@
     margin-top: 20px;
     font-family: 'Roboto Light', sans-serif;
     font-size: 1.14rem;
-    line-height: 16px;
+    line-height: 1.14rem;
     color: $gray-squirrel;
     text-align: center;
     letter-spacing: 0.5px;
@@ -180,7 +180,7 @@
     left: 42px;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.78rem;
-    line-height: 25px;
+    line-height: 1.78rem;
     color: $gray-squirrel;
     letter-spacing: 0.5px;
 
@@ -213,7 +213,7 @@
     margin-right: 5px;
     font-family: 'Roboto Light', sans-serif;
     font-size: 1.14rem;
-    line-height: 16px;
+    line-height: 1.14rem;
     color: $gray-squirrel;
     text-align: center;
     letter-spacing: 0.5px;

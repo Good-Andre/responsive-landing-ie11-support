@@ -61,15 +61,14 @@
   }
 }
 
-.slider-item {
-  padding: 0 3px;
-}
-
 .item-slider {
+  cursor: grab;
+
   &__title {
+    padding: 0 3px;
     margin-bottom: 13px;
     font-size: 1.43rem;
-    line-height: 20px;
+    line-height: 1.43rem;
     color: $very-pale;
     letter-spacing: 0.4px;
   }
@@ -88,7 +87,7 @@
   &__stats {
     margin-bottom: 52px;
     font-family: 'Source Sans Pro light', sans-serif;
-    color: $gray-brown;
+    color: $dark-turquoise;
     letter-spacing: 1px;
 
     @media (max-width: $md+px) {
@@ -99,7 +98,7 @@
   &__text {
     max-width: 582px;
     margin-bottom: 46px;
-    line-height: 25px;
+    line-height: 1.78rem;
     color: $gray-squirrel;
     letter-spacing: 0.5px;
 

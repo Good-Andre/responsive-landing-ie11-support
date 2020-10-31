@@ -32,6 +32,7 @@ $(function () {
     document.body.style.top = -pagePosition + 'px';
     header.style.top = win.scrollTop();
     document.body.classList.add('has-disable');
+    console.log(win.scrollTop());
   }
 
   function enableScroll() {
@@ -42,6 +43,7 @@ $(function () {
     header.style.paddingRight = '0px';
     $page.scrollTop(pagePosition);
     document.body.removeAttribute('data-position');
+    console.log(win.scrollTop());
   }
 
   function deleteActiveClass() {
@@ -111,6 +113,7 @@ $(function () {
     $(this).addClass('_active-tab');
     $('.bottom-about._active-tab').removeClass('_active-tab');
     content.addClass('_active-tab');
+    content.addClass('_fade');
   });
 
   // section "SERVICES" tabs
@@ -123,6 +126,7 @@ $(function () {
     $(this).addClass('_active-tab');
     $('.item-description._active-tab').removeClass('_active-tab');
     contentLeft.addClass('_active-tab');
+    contentLeft.addClass('_fade');
     $('.right-services._active-tab').removeClass('_active-tab');
     contentRight.addClass('_active-tab');
   });
@@ -214,7 +218,6 @@ $(function () {
   // Event on Services buttons --------------------
 
   $('.left-services__buttons-item').each(function(){
-    $(this).off('click', runCircleProgress);
     $(this).on('click', runCircleProgress);
   });
 

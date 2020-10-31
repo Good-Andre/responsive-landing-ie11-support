@@ -43,7 +43,7 @@ body {
 ._btn {
   padding: 12px 29px 12px 29px;
   font-size: 1.14rem;
-  line-height: 12px;
+  line-height: 0.86rem;
   background: none;
   border: 1px solid $granite-gray;
   border-radius: 20px;
@@ -55,7 +55,7 @@ body {
   margin-bottom: 36px;
   font-family: 'Source Sans Pro light', sans-serif;
   font-size: 1.5rem;
-  line-height: 12px;
+  line-height: 0.86rem;
   color: $granite-gray;
   text-align: center;
   text-transform: uppercase;
@@ -66,7 +66,7 @@ body {
   max-width: 500px;
   padding: 0 15px;
   margin: 0 auto 58px auto;
-  line-height: 25px;
+  line-height: 1.78rem;
   color: $gray-squirrel;
   text-align: center;
   letter-spacing: 0.6px;
@@ -135,7 +135,7 @@ body {
   width: 100%;
   padding: 25px;
   font-size: 2rem;
-  line-height: 36px;
+  line-height: 2.57rem;
   text-align: center;
   background-color: #fff;
 }
@@ -163,12 +163,12 @@ body {
 
 ._text-l {
   font-size: 1.14rem;
-  line-height: 28px;
+  line-height: 2rem;
 }
 
 ._text-r {
   font-size: 1rem;
-  line-height: 25px;
+  line-height: 1.78rem;
 }
 
 ._icon-item {
@@ -191,6 +191,21 @@ body {
   background-color: #3ec191;
 }
 
+._fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @import 'blocks/page-progress';
 @import 'blocks/header';
 @import 'blocks/intro';
@@ -208,5 +223,4 @@ body {
 @import 'blocks/subscribe';
 @import 'blocks/contact';
 @import 'blocks/form';
-@import 'blocks/map';
 @import 'blocks/footer';
