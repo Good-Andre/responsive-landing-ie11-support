@@ -1,6 +1,5 @@
 .impressed {
   position: relative;
-  min-height: 392px;
   background-color: #1f1f21;
   background-image: url('../images/impressed-bg-1.1.jpg');
   background-repeat: no-repeat;
@@ -16,8 +15,6 @@
   }
 
   @media (max-width: $sm+px) {
-    min-height: 104px;
-    max-height: 392px;
   }
 
   &::after {
@@ -34,33 +31,35 @@
     display: flex;
     justify-content: space-between;
     max-width: 1210px;
-    padding: 0 25px;
+    padding: 78px 25px 0;
     transition: all 0.3s ease 0s;
 
     @media (max-width: $xl+px) {
       flex-direction: column;
+      padding-top: 64px;
+      padding-bottom: 50px;
+    }
+
+    @media (max-width: $md+px) {
+      padding-top: 50px;
+      padding-bottom: 40px;
     }
   }
 
   &__left {
     z-index: 1;
     max-width: 600px;
-    margin-top: 80px;
     color: $gray-window;
     transition: all 0.3s ease 0s;
 
     @media (max-width: $xl+px) {
       width: 100%;
-      margin: 64px auto 40px auto;
+      margin: 0 auto 40px auto;
       text-align: center;
     }
 
-    @media (max-width: $md+px) {
-      margin-top: 0;
-    }
-
     @media (max-width: $sm+px) {
-      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -75,12 +74,10 @@
     }
 
     @media (max-width: $md+px) {
-      margin-top: 50px;
       margin-bottom: 36px;
     }
 
     @media (max-width: $sm+px) {
-      margin-top: 42px;
       margin-bottom: 31px;
     }
   }
@@ -88,19 +85,19 @@
   &__text {
     margin-bottom: 18px;
     font-size: 1.14rem;
-    line-height: 28px;
+    line-height: 2rem;
   }
 
   &__author {
     font-size: 1rem;
     font-weight: bold;
-    line-height: 25px;
+    line-height: 1.78rem;
     text-transform: uppercase;
     letter-spacing: 0.9px;
   }
 
   &__author-position {
-    line-height: 25px;
+    line-height: 1.78rem;
     text-transform: uppercase;
     letter-spacing: 0.6px;
 
@@ -116,7 +113,7 @@
     height: 328px;
 
     @media (max-width: $xl+px) {
-      margin: 0 auto 50px auto;
+      margin: 0 auto;
     }
 
     @media (max-width: $sm+px) {
@@ -169,7 +166,7 @@
 
   &__img-block {
     position: absolute;
-    top: -38px;
+    top: -116px;
     width: 409px;
     height: 328px;
     background-image: url('../images/tv-0.png');

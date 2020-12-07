@@ -51,7 +51,6 @@ body {
 }
 
 ._title {
-  margin-top: 76px;
   margin-bottom: 36px;
   font-family: 'Source Sans Pro light', sans-serif;
   font-size: 1.5rem;
@@ -223,4 +222,5 @@ body {
 @import 'blocks/subscribe';
 @import 'blocks/contact';
 @import 'blocks/form';
+@import 'blocks/map';
 @import 'blocks/footer';

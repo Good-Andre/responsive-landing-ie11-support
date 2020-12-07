@@ -1,21 +1,22 @@
 .price {
-  // min-height: 638px;
   background-color: $smoky-white;
 
   &__container {
     max-width: 857px;
-    padding: 0 13px;
-  }
-
-  &__title {
-    margin-top: 76px;
+    padding: 76px 13px 104px;
 
     @media (max-width: $md+px) {
-      margin-top: 50px;
+      padding-top: 50px;
+      padding-bottom: 30px;
     }
 
     @media (max-width: $sm+px) {
-      margin-top: 42px;
+      padding-top: 42px;
+    }
+  }
+
+  &__title {
+    @media (max-width: $sm+px) {
       margin-bottom: 34px;
     }
   }
@@ -33,11 +34,9 @@
   &__cards {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 104px;
 
     @media (max-width: $md+px) {
       flex-direction: column;
-      margin-bottom: 30px;
     }
   }
 
@@ -108,14 +107,14 @@
   &__top-title {
     font-size: 1.43rem;
     font-weight: bold;
-    line-height: 67px;
+    line-height: 4.78rem;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
 
     @media (max-width: $md+px) {
       margin-top: 38px;
-      line-height: 20px;
+      line-height: 1.43rem;
       color: $gray-squirrel;
       background-color: #fff;
     }
@@ -136,7 +135,7 @@
 
   &__text {
     font-size: 1.43rem;
-    line-height: 28px;
+    line-height: 2rem;
     color: $gray-squirrel;
     text-align: center;
   }
@@ -164,12 +163,12 @@
 
   &__text {
     margin-left: 32px;
-    line-height: 31px;
+    line-height: 2.21rem;
     color: $gray-squirrel;
 
     @media (max-width: $md+px) {
       margin: 0 0 13px 0;
-      line-height: 16px;
+      line-height: 1.14rem;
       text-align: center;
     }
   }
@@ -182,7 +181,7 @@
     padding: 0 70px;
     margin-top: 24px;
     font-size: 1.14rem;
-    line-height: 67px;
+    line-height: 4.78rem;
     color: #fff;
     background-color: #19bd9a;
 
@@ -198,25 +197,17 @@
       padding: 11px 28px 11px 28px;
       margin: 6px auto 15px auto;
       font-size: 1.14rem;
-      line-height: 16px;
+      line-height: 1.14rem;
       color: #fff;
       background-color: #19bd9a;
       border: 1px solid #19bd9a;
       border-radius: 20px;
-      // transition: all 0.2s ease 0s;
-
-      // &:hover {
-      //   color: $gray-squirrel;
-      //   background-color: #fff;
-      //   border: 1px solid $gray-squirrel;
-      // }
     }
 
     &::before {
       position: absolute;
       top: 1px;
       right: 70px;
-      // content: url(../images/icons/back-item-bottom-link-arrow.svg);
       content: '>';
 
       @media (max-width: $md+px) {

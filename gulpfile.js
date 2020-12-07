@@ -108,7 +108,6 @@ function css() {
         grid: true,
       })
     )
-    .pipe(dest(path.build.css))
     .pipe(
       cleanCss({
         compatibility: 'ie8',

@@ -8,9 +8,14 @@
   &__container {
     max-width: 1230px;
     padding: 0 40px;
+    padding-top: 75px;
 
     @media (max-width: $md+px) {
-      padding: 0 20px 0 20px;
+      padding: 52px 20px 0 20px;
+    }
+
+    @media (max-width: $sm+px) {
+      padding-top: 46px;
     }
   }
 
@@ -19,12 +24,8 @@
     text-align: left;
 
     @media (max-width: $md+px) {
-      margin-top: 52px;
+      // margin-top: 52px;
       text-align: center;
-    }
-
-    @media (max-width: $sm+px) {
-      margin-top: 46px;
     }
   }
 
@@ -61,11 +62,12 @@
   }
 }
 
-.item-slider {
-  cursor: grab;
+.slider-item {
+  padding: 0 3px;
+}
 
+.item-slider {
   &__title {
-    padding: 0 3px;
     margin-bottom: 13px;
     font-size: 1.43rem;
     line-height: 1.43rem;

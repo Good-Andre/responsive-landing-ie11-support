@@ -1,13 +1,23 @@
 .team {
+  padding-top: 76px;
+  padding-bottom: 165px;
+
+  @media (max-width: $md+px) {
+    padding-top: 50px;
+    padding-bottom: 62px;
+  }
+
+  @media (max-width: $sm+px) {
+    padding-top: 42px;
+    padding-bottom: 52px;
+  }
+
+  @media (max-width: $xl+px) {
+    padding-bottom: 124px;
+  }
+
   &__title {
-    margin-top: 76px;
-
-    @media (max-width: $md+px) {
-      margin-top: 50px;
-    }
-
     @media (max-width: $sm+px) {
-      margin-top: 42px;
       margin-bottom: 30px;
     }
   }
@@ -23,19 +33,7 @@
   &__slider {
     max-width: 998px;
     padding: 0 15px;
-    margin: 0 auto 165px auto;
-
-    @media (max-width: $xl+px) {
-      margin-bottom: 124px;
-    }
-
-    @media (max-width: $md+px) {
-      margin-bottom: 62px;
-    }
-
-    @media (max-width: $sm+px) {
-      margin-bottom: 52px;
-    }
+    margin: 0 auto 0 auto;
   }
 }
 
@@ -44,7 +42,6 @@
   display: flex;
   justify-content: space-between;
   text-align: right;
-  cursor: grab;
 
   @media (max-width: $md+px) {
     flex-direction: column;

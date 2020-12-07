@@ -1,29 +1,26 @@
 .already {
-  height: 201px;
   background-color: #0a0a0a;
   background-image: url('../images/already-bg-3.jpg');
   background-position: center;
 
-  @media (max-width: $sm+px) {
-    height: 100%;
-  }
-
   &__container {
     width: 100%;
+    padding-top: 52px;
+    padding-bottom: 52px;
     text-align: center;
+
+    @media (max-width: $sm+px) {
+      padding-top: 35px;
+      padding-bottom: 42px;
+    }
   }
 
   &__title {
-    margin-top: 52px;
     margin-bottom: 29px;
     font-size: 1.43rem;
-    line-height: 25px;
+    line-height: 1.78rem;
     color: #fff;
     letter-spacing: 0.4px;
-
-    @media (max-width: $sm+px) {
-      margin-top: 35px;
-    }
   }
 
   &__button {
@@ -33,10 +30,6 @@
     &:hover {
       color: $granite-gray;
       background-color: #fff;
-    }
-
-    @media (max-width: $sm+px) {
-      margin-bottom: 42px;
     }
   }
 }

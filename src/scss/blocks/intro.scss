@@ -52,7 +52,7 @@
   &__content-title {
     font-family: 'Source Sans Pro light', sans-serif;
     font-size: 35px;
-    line-height: 70px;
+    line-height: 5rem;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 7px;
@@ -76,14 +76,14 @@
       padding: 0 20px;
       margin: 20px 0 10px 0;
       font-size: 30px;
-      line-height: 40px;
+      line-height: 2.86rem;
     }
   }
 
   &__content-text {
     max-width: 603px;
     font-size: 16px;
-    line-height: 28px;
+    line-height: 2rem;
     color: #fff;
     transition: all 0.4s ease 0s;
 

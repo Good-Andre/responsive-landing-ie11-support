@@ -1,12 +1,12 @@
 .projects {
-  &__title {
-    @media (max-width: $md+px) {
-      margin-top: 50px;
-    }
+  padding-top: 78px;
 
-    @media (max-width: $sm+px) {
-      margin-top: 42px;
-    }
+  @media (max-width: $md+px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: $sm+px) {
+    padding-top: 42px;
   }
 
   &__text {
@@ -47,7 +47,7 @@
   &__bottom-text {
     margin-right: 7%;
     font-size: 1.43rem;
-    line-height: 28px;
+    line-height: 2rem;
     color: #fff;
 
     span {
@@ -135,7 +135,7 @@
   &__item-title {
     font-family: 'Source Sans Pro light', sans-serif;
     font-size: 1.43rem;
-    line-height: 20px;
+    line-height: 1.43rem;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;

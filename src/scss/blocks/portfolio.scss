@@ -2,13 +2,25 @@
   height: 100%;
   background-color: $smoky-white;
 
-  &__title {
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    @media (max-width: $xl+px) {
+      padding-bottom: 0;
+    }
+
     @media (max-width: $md+px) {
-      margin-top: 50px;
+      padding-top: 50px;
     }
 
     @media (max-width: $sm+px) {
-      margin-top: 42px;
+      padding-top: 42px;
+    }
+  }
+
+  &__title {
+    @media (max-width: $sm+px) {
       margin-bottom: 30px;
     }
   }
@@ -43,7 +55,7 @@
   &__filter-item {
     position: relative;
     font-size: 1.14rem;
-    line-height: 1.14rem;
+    line-height: 16px;
     color: $granite-gray;
     cursor: pointer;
 
@@ -77,18 +89,15 @@
 
   &__bottom {
     max-width: 1110px;
+    // min-height: 201px;
     padding-top: 56px;
     padding-bottom: 54px;
-    margin: 0 auto 100px auto;
+    margin: 0 auto;
     text-align: center;
     background-color: #22ac8b;
     background-image: url('../images/webp/port-bg.jpg');
     background-position: center;
     background-size: cover;
-
-    @media (max-width: $xl+px) {
-      margin-bottom: 0;
-    }
 
     @media (max-width: $md+px) {
       padding-top: 42px;
@@ -96,6 +105,7 @@
     }
 
     @media (max-width: $sm+px) {
+      // min-height: 100%;
       padding-top: 27px;
       padding-bottom: 31px;
     }
@@ -105,7 +115,7 @@
     padding: 0 15px;
     margin-bottom: 27px;
     font-size: 1.43rem;
-    line-height: 1.78rem;
+    line-height: 25px;
     color: #fff;
     letter-spacing: 0.5px;
 
@@ -128,6 +138,10 @@
     }
   }
 
+  // &__test-wrapeer {
+  //   margin-top: -30px;
+  // }
+
   &__works {
     position: relative;
     column-gap: 10px;
@@ -135,6 +149,8 @@
     padding: 5px;
     margin: 0 auto 40px auto;
     column-count: 1;
+    // height: 100%;
+    // overflow: hidden;
 
     @media (max-width: $sm+px) {
       margin-bottom: 20px;
@@ -157,13 +173,22 @@
     }
   }
 
-  &__work-inner {
+  &__works-item {
     display: block;
+    width: 100%;
+    padding-bottom: 10px;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      margin-bottom: 10px;
+    }
+
     break-inside: avoid-column;
+  }
+
+  &__work-inner {
     position: relative;
     margin: 0 auto;
     overflow: hidden;
-    margin-bottom: 10px;
 
     @media (min-width: $md+px) {
       &:hover > .overlay-work {
@@ -188,7 +213,6 @@
 
 img.portfolio__works-image {
   width: 100%;
-  display: block;
   height: auto;
 }
 
@@ -196,23 +220,28 @@ img.portfolio__works-image {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 15px;
-  background-color: rgba($color: #000, $alpha: 0.8);
+  background-color: rgba($color: #000, $alpha: .8);
   opacity: 0;
   transition: all 0.2s ease 0s;
 
   @media (max-width: $md+px) {
     background-color: rgba($color: #fff, $alpha: 0);
     opacity: 1;
+  }
 
-        @media (max-width: $md+px) {
-      justify-content: center;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 230px;
+    height: 100%;
+    padding: 15px;
+    margin: 0 auto;
+
+    @media (max-width: $md+px) {
+      justify-content: space-between;
       max-width: 100%;
       padding: 0;
     }
@@ -223,7 +252,7 @@ img.portfolio__works-image {
     margin-top: 10%;
     font-family: 'Source Sans Pro light', sans-serif;
     font-size: 1.43rem;
-    line-height: 1.43rem;
+    line-height: 20px;
     color: $gray-window;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -237,7 +266,7 @@ img.portfolio__works-image {
       padding: 5px;
       color: $very-pale;
       text-align: center;
-      background-color: rgba($color: #000, $alpha: 0.7);
+      background-color: rgba($color: #000, $alpha: .7);
     }
 
     @media (max-width: 380px) {
@@ -262,7 +291,7 @@ img.portfolio__works-image {
   &__text {
     margin-bottom: 12px;
     font-size: 0.86rem;
-    line-height: 1.43rem;
+    line-height: 20px;
     color: $gray-window;
     letter-spacing: 0.3px;
 
@@ -288,7 +317,7 @@ img.portfolio__works-image {
       font-style: italic;
       color: $very-pale;
       text-align: center;
-      background-color: rgba($color: #000, $alpha: 0.7);
+      background-color: rgba($color: #000, $alpha: .7);
     }
   }
 
@@ -301,7 +330,7 @@ img.portfolio__works-image {
 
     @media (max-width: $md+px) {
       text-align: center;
-      background-color: rgba($color: #000, $alpha: 0.7);
+      background-color: rgba($color: #000, $alpha: .7);
     }
   }
 

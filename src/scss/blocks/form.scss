@@ -1,13 +1,18 @@
 .form-section {
-  // max-height: 552px;
   background-color: #fff;
 
   &__container {
     max-width: 981px;
-    padding: 0 20px;
+    padding: 80px 20px 129px;
+
+    @media (max-width: $xl+px) {
+      padding-bottom: 80px;
+    }
 
     @media (max-width: $md+px) {
       max-width: 564px;
+      padding-top: 42px;
+      padding-bottom: 42px;
     }
   }
 }
@@ -16,12 +21,10 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
     margin-bottom: 29px;
 
     @media (max-width: $md+px) {
       flex-direction: column;
-      margin-top: 42px;
       margin-bottom: 0;
     }
   }
@@ -33,7 +36,7 @@
     padding-left: 20px;
     margin-right: 15px;
     font-size: 1rem;
-    line-height: 41px;
+    line-height: 2.93rem;
     color: $granite-gray;
     border: 1px solid #d3d8dc;
 
@@ -77,9 +80,8 @@
   &__submit {
     display: block;
     width: 100%;
-    margin-bottom: 129px;
     font-size: 1.14rem;
-    line-height: 53px;
+    line-height: 3.78rem;
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
@@ -91,18 +93,13 @@
       }
     }
 
-    @media (max-width: $xl+px) {
-      margin-bottom: 80px;
-    }
-
     @media (max-width: $md+px) {
       max-width: 522px;
-      margin-bottom: 42px;
     }
 
     @media (max-width: $sm+px) {
       font-size: 1rem;
-      line-height: 41px;
+      line-height: 2.93rem;
     }
   }
 }

@@ -3,7 +3,17 @@
 
   &__container {
     max-width: 1005px;
-    padding: 0 20px;
+    padding: 78px 20px 53px;
+
+    @media (max-width: $md+px) {
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+
+    @media (max-width: $sm+px) {
+      padding-top: 35px;
+      padding-bottom: 5px;
+    }
   }
 
   &__top-inner {
@@ -13,12 +23,10 @@
 
   &__top-title {
     @media (max-width: $md+px) {
-      margin-top: 50px;
       margin-bottom: 22px;
     }
 
     @media (max-width: $sm+px) {
-      margin-top: 35px;
       line-height: 2rem;
     }
   }
@@ -75,16 +83,10 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 53px;
 
     @media (max-width: $md+px) {
       flex-direction: column;
       align-items: center;
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: $sm+px) {
-      margin-bottom: 5px;
     }
   }
 
