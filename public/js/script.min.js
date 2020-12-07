@@ -149,9 +149,12 @@ $(function () {
 
     if (win.outerWidth() <= 768) {
       $('.menu-header__link').on('click', scrollTopFixMenu);
+
     } else {
       $('.menu-header__link').on('click', scrollTopDefault);
+      $('.portfolio__slider').slick('unslick');
     }
+
   });
 
   // Circle Progress Bar -----------------
