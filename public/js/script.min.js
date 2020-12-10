@@ -31,8 +31,7 @@ $(function () {
     document.body.dataset.position = pagePosition;
     document.body.style.top = -pagePosition + 'px';
     header.style.top = win.scrollTop();
-    document.body.classList.add('has-disable');
-    console.log(win.scrollTop());
+    // document.body.classList.add('has-disable');
   }
 
   function enableScroll() {
@@ -40,13 +39,14 @@ $(function () {
     document.body.style.top = 'auto';
     document.body.classList.remove('_disable-scroll');
     document.body.style.paddingRight = '0px';
-    header.style.paddingRight = '0px';
     $page.scrollTop(pagePosition);
     document.body.removeAttribute('data-position');
-    console.log(win.scrollTop());
+    header.style.paddingRight = '0px';
   }
 
+
   function deleteActiveClass() {
+
     $('.menu-header__burger,.menu-header__body').removeClass('_active');
     $('._overlay').removeClass('_overlay-show');
   }
@@ -136,14 +136,10 @@ $(function () {
   win.on('resize', function () {
 
     if (win.outerWidth() > 768) {
-      $('.menu-header__burger,.menu-header__body').removeClass('_active');
-      $('._overlay').removeClass('_overlay-show');
-    }
+      deleteActiveClass()
 
-    if (win.outerWidth() > 768) {
-      if ($('body').hasClass('has-disable')) {
+      if ($('body').hasClass('_disable-scroll')) {
         enableScroll();
-        $('body').removeClass('has-disable');
       }
     }
 
@@ -152,7 +148,6 @@ $(function () {
 
     } else {
       $('.menu-header__link').on('click', scrollTopDefault);
-      $('.portfolio__slider').slick('unslick');
     }
 
   });
